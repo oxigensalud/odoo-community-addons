@@ -9,7 +9,7 @@
     "license": "AGPL-3",
     "category": "Maintenance",
     "author": "Dixmit,Odoo Community Association (OCA)",
-    "website": "https://github.com/oxigensalud/odoo-addons",
+    "website": "https://github.com/oxigensalud/odoo-community-addons",
     "depends": [
         "maintenance",
         "sale",
