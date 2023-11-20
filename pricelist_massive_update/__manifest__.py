@@ -6,7 +6,7 @@
     "category": "Sale",
     "license": "AGPL-3",
     "author": "Vraja Technologies",
-    "website": "https://github.com/oxigensalud/odoo-addons",
+    "website": "https://github.com/oxigensalud/odoo-community-addons",
     "depends": ["base", "sale"],
     "data": [
         "security/ir.model.access.csv",
