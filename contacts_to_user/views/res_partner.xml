@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 Dixmit
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="view_partner_form">
+        <field name="name">res.partner.form (in contacts_to_user)</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    name="show_user"
+                    string="Show user"
+                    type="object"
+                    attrs="{'invisible': [('user_count', '=', 0)]}"
+                    icon="fa-user"
+                />
+                <button
+                    name="show_user"
+                    string="Create user"
+                    type="object"
+                    attrs="{'invisible': [('user_count', '>', 0)]}"
+                    icon="fa-user-plus"
+                />
+                <field name="user_count" invisible="1" />
+            </div>
+        </field>
+    </record>
+
+
+
+</odoo>

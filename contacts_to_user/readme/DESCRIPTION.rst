@@ -1,0 +1,1 @@
+Define users from contacts
