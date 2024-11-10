@@ -56,9 +56,18 @@ class MaintenanceEquipment(models.Model):
                     }
                 )
             elif record.supplier_lot_number and record.supplier_product_id:
-                record.lot_id = self.env["stock.production.lot"].create(
-                    {
-                        "name": record.supplier_lot_number,
-                        "product_id": record.supplier_product_id.id,
-                    }
+                lot = self.env["stock.production.lot"].search(
+                    [
+                        ("name", "=", record.supplier_lot_number),
+                        ("product_id", "=", record.supplier_product_id.id),
+                    ]
                 )
+                if lot:
+                    record.lot_id = lot
+                else:
+                    record.lot_id = self.env["stock.production.lot"].create(
+                        {
+                            "name": record.supplier_lot_number,
+                            "product_id": record.supplier_product_id.id,
+                        }
+                    )
