@@ -32,6 +32,14 @@ class TestEquipmentFromPurchase(SavepointCase):
                 ],
             }
         )
+        cls.equipment_1 = cls.env["maintenance.equipment"].create({"name": "Laptop 1"})
+        cls.location_1 = cls.env["stock.location"].create(
+            {
+                "name": "Test location 1",
+                "usage": "internal",
+                "location_id": cls.env.ref("stock.stock_location_stock").id,
+            }
+        )
 
     def test_equipment_creation(self):
         self.purchase.button_confirm()
@@ -53,3 +61,7 @@ class TestEquipmentFromPurchase(SavepointCase):
             picking.maintenance_equipment_ids,
             self.env[action["res_model"]].browse(action["res_id"]),
         )
+
+    def test_equipment_location(self):
+        self.equipment_1.stock_location_id = self.location_1.id
+        self.assertEqual(self.location_1.equipment_ids.id, self.equipment_1.id)

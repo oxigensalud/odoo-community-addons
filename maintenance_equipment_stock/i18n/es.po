@@ -1,0 +1,207 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* maintenance_equipment_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-03 13:20+0000\n"
+"PO-Revision-Date: 2024-12-03 13:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: maintenance_equipment_stock
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_stock.stock_picking_form_view
+msgid "<span class=\"o_stat_text\">Equipment(s)</span>"
+msgstr "<span class=\"o_stat_text\">Equipo(s)</span>"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_maintenance_equipment__product_brand_id
+msgid "Brand"
+msgstr "Marca"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_maintenance_equipment__display_name
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_product_template__display_name
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_stock_location__display_name
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_stock_production_lot__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_oxigesti_stock_production_lot__equipment_ids
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_stock_production_lot__equipment_ids
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_stock.stock_production_lot_form_view
+msgid "Equipment"
+msgstr "Equipo"
+
+#. module: maintenance_equipment_stock
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_stock.view_location_form
+msgid "Equipments"
+msgstr "Equipos"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_maintenance_equipment__id
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_product_template__id
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_stock_location__id
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_stock_move_line__id
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_stock_picking__id
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_stock_production_lot__id
+msgid "ID"
+msgstr ""
+
+#. module: maintenance_equipment_stock
+#: model:ir.model,name:maintenance_equipment_stock.model_stock_location
+msgid "Inventory Locations"
+msgstr "Ubicaciones de inventario"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_maintenance_equipment____last_update
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_product_template____last_update
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_stock_location____last_update
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_stock_move_line____last_update
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_stock_production_lot____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: maintenance_equipment_stock
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_stock.stock_picking_form_view
+msgid "List view of equipments"
+msgstr "Vista de lista de equipos"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_maintenance_equipment__lot_id
+msgid "Lot"
+msgstr "Lote"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model,name:maintenance_equipment_stock.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "Lote/Número de serie"
+
+#. module: maintenance_equipment_stock
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_stock.product_template_form_view
+msgid "Maintenance"
+msgstr "Mantenimiento"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_ambugest_product_product__maintenance_category_id
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_oxigesti_product_product__maintenance_category_id
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_product_product__maintenance_category_id
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_product_template__maintenance_category_id
+msgid "Maintenance Category"
+msgstr "Categoría de mantenimiento"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model,name:maintenance_equipment_stock.model_maintenance_equipment
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_stock_location__equipment_ids
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_stock_picking__maintenance_equipment_ids
+msgid "Maintenance Equipment"
+msgstr "Equipo"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_stock_picking__maintenance_equipment_count
+msgid "Maintenance Equipment Count"
+msgstr "Conteo de equipos de mantenimiento"
+
+#. module: maintenance_equipment_stock
+#: code:addons/maintenance_equipment_stock/models/stock_move_line.py:0
+#, python-format
+msgid ""
+"Maintenance Equipment already exists for this lot. It is likely that a "
+"return of the lot was made, which is why the maintenance equipment exists. "
+"Please fix this or contact the administrator for further support."
+msgstr ""
+"El equipo de mantenimiento ya existe para este lote. Es probable que se haya"
+" realizado una devolución del lote, por ese motivo el equipo de "
+"mantenimiento existe. Por favor, corrija esto o póngase en contacto con el "
+"administrador para obtener más apoyo."
+
+#. module: maintenance_equipment_stock
+#: code:addons/maintenance_equipment_stock/models/stock_move_line.py:0
+#, python-format
+msgid ""
+"Maintenance Equipment already exists for this lot. Movements have been made "
+"with this lot, which is why the maintenance equipment exists. Please fix "
+"this or contact the administrator for further support."
+msgstr ""
+"El equipo de mantenimiento ya existe para este lote. Se han realizado "
+"movimientos con este lote, por ese motivo el equipo de mantenimiento existe."
+" Por favor, corrija esto o póngase en contacto con el administrador para "
+"obtener más apoyo."
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_ambugest_product_product__maintenance_lot
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_oxigesti_product_product__maintenance_lot
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_product_product__maintenance_lot
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_product_template__maintenance_lot
+msgid "Maintenance Lot"
+msgstr "Lote de mantenimiento"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_ambugest_product_product__maintenance_team_id
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_oxigesti_product_product__maintenance_team_id
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_product_product__maintenance_team_id
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_product_template__maintenance_team_id
+msgid "Maintenance Team"
+msgstr "Equipo de mantenimiento"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_maintenance_equipment__picking_id
+msgid "Picking"
+msgstr "Transferencia"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model,name:maintenance_equipment_stock.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Movimientos de Producto (Stock Move Line)"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model,name:maintenance_equipment_stock.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_maintenance_equipment__purchase_id
+msgid "Purchase"
+msgstr "Compra"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,help:maintenance_equipment_stock.field_maintenance_equipment__product_brand_id
+msgid "Select a brand for this product"
+msgstr "Seleccione una marca para este producto"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_maintenance_equipment__stock_location_id
+msgid "Stock Location"
+msgstr ""
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_maintenance_equipment__stock_move_line_id
+msgid "Stock Move Line"
+msgstr ""
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_maintenance_equipment__supplier_lot_number
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_stock.hr_equipment_view_tree
+#: model_terms:ir.ui.view,arch_db:maintenance_equipment_stock.maintenance_equipment_search_view
+msgid "Supplier Lot Number"
+msgstr "Número de lote del proveedor"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_maintenance_equipment__supplier_product_id
+msgid "Supplier Product"
+msgstr "Producto del proveedor"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model,name:maintenance_equipment_stock.model_stock_picking
+msgid "Transfer"
+msgstr "Albarán"

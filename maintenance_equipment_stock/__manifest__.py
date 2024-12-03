@@ -17,6 +17,7 @@
     "data": [
         "views/stock_picking.xml",
         "views/stock_production_lot.xml",
+        "views/stock_location_views.xml",
         "views/maintenance_equipment.xml",
         "views/product_template.xml",
     ],
