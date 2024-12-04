@@ -7,6 +7,7 @@ from odoo import fields, models
 class ProductTemplate(models.Model):
     _inherit = "product.template"
 
-    maintenance_lot = fields.Boolean()
+    # TODO: Review rename maintenance_lot to create_equipment_at_reception or similar
+    maintenance_lot = fields.Boolean(string="Create eq. at reception")
     maintenance_category_id = fields.Many2one("maintenance.equipment.category")
     maintenance_team_id = fields.Many2one("maintenance.team")

@@ -25,7 +25,6 @@ class MaintenanceEquipment(models.Model):
         domain=[
             ("type", "=", "product"),
             ("tracking", "=", "serial"),
-            ("maintenance_lot", "=", True),
         ],
         readonly=False,
         tracking=True,
