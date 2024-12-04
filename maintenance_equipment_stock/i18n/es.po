@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-03 13:20+0000\n"
-"PO-Revision-Date: 2024-12-03 13:20+0000\n"
+"POT-Creation-Date: 2024-12-04 08:35+0000\n"
+"PO-Revision-Date: 2024-12-04 08:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -155,11 +155,6 @@ msgid "Maintenance Team"
 msgstr "Equipo de mantenimiento"
 
 #. module: maintenance_equipment_stock
-#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_maintenance_equipment__picking_id
-msgid "Picking"
-msgstr "Transferencia"
-
-#. module: maintenance_equipment_stock
 #: model:ir.model,name:maintenance_equipment_stock.model_stock_move_line
 msgid "Product Moves (Stock Move Line)"
 msgstr "Movimientos de Producto (Stock Move Line)"
@@ -173,6 +168,11 @@ msgstr "Plantilla de producto"
 #: model:ir.model.fields,field_description:maintenance_equipment_stock.field_maintenance_equipment__purchase_id
 msgid "Purchase"
 msgstr "Compra"
+
+#. module: maintenance_equipment_stock
+#: model:ir.model.fields,field_description:maintenance_equipment_stock.field_maintenance_equipment__picking_id
+msgid "Reception"
+msgstr "Recepción"
 
 #. module: maintenance_equipment_stock
 #: model:ir.model.fields,help:maintenance_equipment_stock.field_maintenance_equipment__product_brand_id
@@ -205,3 +205,43 @@ msgstr "Producto del proveedor"
 #: model:ir.model,name:maintenance_equipment_stock.model_stock_picking
 msgid "Transfer"
 msgstr "Albarán"
+
+#. module: maintenance_equipment_stock
+#: code:addons/maintenance_equipment_stock/models/maintenance_equipment.py:0
+#, python-format
+msgid ""
+"You have selected for the maintenance equipment %s a purchase, but you have "
+"not selected any picking."
+msgstr ""
+"Ha seleccionado para el equipo de mantenimiento %s una compra, pero no ha "
+"seleccionado ningún picking."
+
+#. module: maintenance_equipment_stock
+#: code:addons/maintenance_equipment_stock/models/maintenance_equipment.py:0
+#, python-format
+msgid ""
+"You have selected for the maintenance equipment %s the picking %s, which is "
+"not an incoming picking."
+msgstr ""
+"Ha seleccionado para el equipo de mantenimiento %s el picking %s, que no es "
+"un picking de entrada."
+
+#. module: maintenance_equipment_stock
+#: code:addons/maintenance_equipment_stock/models/maintenance_equipment.py:0
+#, python-format
+msgid ""
+"You have selected for the maintenance equipment %s the picking %s, which is "
+"not linked to any purchase."
+msgstr ""
+"Ha seleccionado para el equipo de mantenimiento %s el picking %s, que no está"
+" vinculado a ninguna compra."
+
+#. module: maintenance_equipment_stock
+#: code:addons/maintenance_equipment_stock/models/maintenance_equipment.py:0
+#, python-format
+msgid ""
+"You have selected for the maintenance equipment %s the picking %s, which is "
+"not linked to the same purchase you have selected."
+msgstr ""
+"Ha seleccionado para el equipo de mantenimiento %s el picking %s, que no está"
+" vinculado a la misma compra que ha seleccionado."
