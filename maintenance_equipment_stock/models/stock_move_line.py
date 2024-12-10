@@ -51,8 +51,7 @@ class StockMoveLine(models.Model):
         result = super()._action_done()
         for ml in self.filtered(lambda m: m.exists()):
             if (
-                ml.product_id.maintenance_lot
-                and ml.product_id.type == "product"
+                ml.product_id.type == "product"
                 and ml.product_id.tracking == "serial"
                 and ml.move_id.picking_type_id.code in ["incoming", "internal"]
             ):
@@ -61,7 +60,10 @@ class StockMoveLine(models.Model):
                 )
                 if maintenance_equipment:
                     ml._update_maintenance_equipment_by_ml(maintenance_equipment)
-                else:
+                elif (
+                    ml.product_id.maintenance_lot
+                    and ml.move_id.picking_type_id.code == "incoming"
+                ):
                     ml._create_maintenance_equipment()
         return result
 
