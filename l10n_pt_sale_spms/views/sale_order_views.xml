@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 NuoBiT - Deniz Gallo <dgallo@nuobit.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl) -->
+<odoo>
+    <record id="view_order_form_spms_button" model="ir.ui.view">
+        <field name="name">sale.order.form.spms.button</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='order_line']/tree//field[@name='price_subtotal']"
+                position="after"
+            >
+                <button
+                    name="action_view_spms_sale_order_line"
+                    type="object"
+                    icon="fa-eye"
+                    class="btn-primary"
+                    attrs="{'invisible': [('spms_information', '=', False)]}"
+                />
+                <field name="spms_information" invisible="1" />
+            </xpath>
+            <xpath expr="//field[@name='client_order_ref']" position="after">
+                <field name="spms_information" readonly="True" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
