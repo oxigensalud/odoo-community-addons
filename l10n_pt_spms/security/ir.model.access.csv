@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_spms_lot_user,spms.lot.user,model_spms_lot,base.group_user,1,0,0,0
+access_spms_lot_manager,spms.lot.manager,model_spms_lot,base.group_system,1,1,1,1
+access_spms_context_user,spms.context.user,model_spms_context,base.group_user,1,0,0,0
+access_spms_context_manager,spms.context.manager,model_spms_context,base.group_system,1,1,1,1
+access_spms_prescription_type_user,spms.prescription.type.user,model_spms_prescription_type,base.group_user,1,0,0,0
+access_spms_prescription_type_manager,spms.prescription.type.manager,model_spms_prescription_type,base.group_system,1,1,1,1
+access_spms_suspension_reason_user,spms.suspension.reason.user,model_spms_suspension_reason,base.group_user,1,0,0,0
+access_spms_suspension_reason_manager,spms.suspension.reason.manager,model_spms_suspension_reason,base.group_system,1,1,1,1

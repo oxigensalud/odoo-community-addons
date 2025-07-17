@@ -1,0 +1,197 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_pt_spms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-17 09:48+0000\n"
+"PO-Revision-Date: 2025-07-17 09:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_lot__code__991
+msgid "Aerosol therapy"
+msgstr "Terapia por aerosol"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__code
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__code
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__code
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason__code
+#: model_terms:ir.ui.view,arch_db:l10n_pt_spms.spms_context_search_view
+msgid "Code"
+msgstr "Código"
+
+#. module: l10n_pt_spms
+#: model:ir.ui.menu,name:l10n_pt_spms.spms_context_menu
+msgid "Context"
+msgstr "Contexto"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__create_uid
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__create_uid
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__create_uid
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__create_date
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__create_date
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__create_date
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_product_product__display_name
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_product_template__display_name
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__display_name
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__display_name
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__display_name
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_product_product__id
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_product_template__id
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__id
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__id
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__id
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason__id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_product_product____last_update
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_product_template____last_update
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context____last_update
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot____last_update
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type____last_update
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__write_uid
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__write_uid
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__write_uid
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__write_date
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__write_date
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__write_date
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: l10n_pt_spms
+#: model:ir.ui.menu,name:l10n_pt_spms.spms_lot_menu
+msgid "Lot"
+msgstr "Lote"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_lot__code__993
+msgid "Mechanical ventilation"
+msgstr "Ventilación mecánica"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__name
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__name
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__name
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason__name
+#: model_terms:ir.ui.view,arch_db:l10n_pt_spms.spms_context_search_view
+msgid "Name"
+msgstr "Nombre"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_lot__code__994
+msgid "Others"
+msgstr "Otros"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_lot__code__992
+msgid "Oxygen therapy"
+msgstr "Terapia de oxígeno"
+
+#. module: l10n_pt_spms
+#: model:ir.ui.menu,name:l10n_pt_spms.spms_prescription_type_menu
+msgid "Prescription Type"
+msgstr "Tipo de prescripción"
+
+#. module: l10n_pt_spms
+#: model:ir.model,name:l10n_pt_spms.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: l10n_pt_spms
+#: model:ir.model,name:l10n_pt_spms.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: l10n_pt_spms
+#: model:ir.ui.menu,name:l10n_pt_spms.spms_root_menu
+msgid "SPMS"
+msgstr "SPMS"
+
+#. module: l10n_pt_spms
+#: model:ir.actions.act_window,name:l10n_pt_spms.spms_context_act_window
+msgid "SPMS Context"
+msgstr "Contexto SPMS"
+
+#. module: l10n_pt_spms
+#: model:ir.actions.act_window,name:l10n_pt_spms.spms_lot_act_window
+#: model:ir.model,name:l10n_pt_spms.model_spms_lot
+msgid "SPMS Lot"
+msgstr "Lote SPMS"
+
+#. module: l10n_pt_spms
+#: model:ir.actions.act_window,name:l10n_pt_spms.spms_prescription_type_act_window
+#: model:ir.model,name:l10n_pt_spms.model_spms_prescription_type
+msgid "SPMS Prescription Type"
+msgstr "Tipo de receta SPMS"
+
+#. module: l10n_pt_spms
+#: model:ir.actions.act_window,name:l10n_pt_spms.spms_suspension_reason_act_window
+#: model:ir.model,name:l10n_pt_spms.model_spms_suspension_reason
+msgid "SPMS Suspension Reason"
+msgstr "Razón de suspensión SPMS"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_product_product__spms_lot_id
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_product_template__spms_lot_id
+msgid "Spms Lot"
+msgstr "Lote SPMS"
+
+#. module: l10n_pt_spms
+#: model:ir.ui.menu,name:l10n_pt_spms.spms_suspension_reason_menu
+msgid "Suspension Reason"
+msgstr "Razón de suspensión"
+
+#. module: l10n_pt_spms
+#: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_context_code_uniq
+#: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_prescription_type_code_uniq
+#: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_suspension_reason_code_uniq
+msgid "The code must be unique"
+msgstr "El código debe ser único"
+
+#. module: l10n_pt_spms
+#: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_lot_name_uniq
+msgid "The name of the lot must be unique."
+msgstr "El nombre del lote debe ser único."
+
+#. module: l10n_pt_spms
+#: model:ir.model,name:l10n_pt_spms.model_spms_context
+msgid "spms.context"
+msgstr ""
