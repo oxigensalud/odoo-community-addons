@@ -51,10 +51,10 @@ Authors
 Contributors
 ------------
 
-- `Dixmit <https://www.dixmit.com>`__:
-- `NuoBiT <https://www.nuobit.com>`__:
+-  `Dixmit <https://www.dixmit.com>`__:
+-  `NuoBiT <https://www.nuobit.com>`__:
 
-  - Deniz Gallo dgallo@nuobit.com
+   -  Deniz Gallo dgallo@nuobit.com
 
 Maintainers
 -----------
