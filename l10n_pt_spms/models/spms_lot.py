@@ -10,17 +10,9 @@ class SpmsLot(models.Model):
     _description = "SPMS Lot"
 
     name = fields.Char(required=True)
-    code = fields.Selection(
-        selection=[
-            ("991", "Aerosol therapy"),
-            ("992", "Oxygen therapy"),
-            ("993", "Mechanical ventilation"),
-            ("994", "Others"),
-        ],
-        required=True,
-        default="992",
-    )
+    code = fields.Char(required=True)
 
     _sql_constraints = [
         ("uniq", "unique(name)", "The name of the lot must be unique."),
+        ("uniq", "unique(code)", "The code of the lot must be unique."),
     ]
