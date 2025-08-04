@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2025 Dixmit
-     Copyright 2025 NuoBiT - Deniz Gallo <dgallo@nuobit.com>Z
+     Copyright 2025 NuoBiT - Deniz Gallo <dgallo@nuobit.com>
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
     <record id="spms_context_form_view" model="ir.ui.view">
