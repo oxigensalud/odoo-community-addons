@@ -12,6 +12,7 @@
     "website": "https://github.com/oxigensalud/odoo-community-addons",
     "depends": ["account"],
     "data": [
+        "views/res_partner.xml",
         "security/ir.model.access.csv",
         "views/menu.xml",
         "views/spms_context_views.xml",
