@@ -6,19 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 09:50+0000\n"
-"PO-Revision-Date: 2025-07-17 09:50+0000\n"
+"POT-Creation-Date: 2025-09-01 07:23+0000\n"
+"PO-Revision-Date: 2025-09-01 07:23+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-
-#. module: l10n_pt_spms
-#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_lot__code__991
-msgid "Aerosol therapy"
-msgstr "Terapia com aerossol"
 
 #. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__code
@@ -28,6 +23,11 @@ msgstr "Terapia com aerossol"
 #: model_terms:ir.ui.view,arch_db:l10n_pt_spms.spms_context_search_view
 msgid "Code"
 msgstr "Código"
+
+#. module: l10n_pt_spms
+#: model:ir.model,name:l10n_pt_spms.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
 
 #. module: l10n_pt_spms
 #: model:ir.ui.menu,name:l10n_pt_spms.spms_context_menu
@@ -53,6 +53,7 @@ msgstr "Criado em"
 #. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_product__display_name
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_template__display_name
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_res_partner__display_name
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__display_name
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__display_name
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__display_name
@@ -63,6 +64,7 @@ msgstr "Nome"
 #. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_product__id
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_template__id
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_res_partner__id
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__id
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__id
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__id
@@ -73,6 +75,7 @@ msgstr ""
 #. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_product____last_update
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_template____last_update
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_res_partner____last_update
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context____last_update
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot____last_update
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type____last_update
@@ -102,11 +105,6 @@ msgid "Lot"
 msgstr "Lote"
 
 #. module: l10n_pt_spms
-#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_lot__code__993
-msgid "Mechanical ventilation"
-msgstr "Ventiloterapia"
-
-#. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__name
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__name
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__name
@@ -114,16 +112,6 @@ msgstr "Ventiloterapia"
 #: model_terms:ir.ui.view,arch_db:l10n_pt_spms.spms_context_search_view
 msgid "Name"
 msgstr "Nome"
-
-#. module: l10n_pt_spms
-#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_lot__code__994
-msgid "Others"
-msgstr "Outros"
-
-#. module: l10n_pt_spms
-#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_lot__code__992
-msgid "Oxygen therapy"
-msgstr "Oxigenoterapia"
 
 #. module: l10n_pt_spms
 #: model:ir.ui.menu,name:l10n_pt_spms.spms_prescription_type_menu
@@ -147,6 +135,7 @@ msgstr "SPMS"
 
 #. module: l10n_pt_spms
 #: model:ir.actions.act_window,name:l10n_pt_spms.spms_context_act_window
+#: model:ir.model,name:l10n_pt_spms.model_spms_context
 msgid "SPMS Context"
 msgstr "Contexto SPMS"
 
@@ -169,6 +158,12 @@ msgid "SPMS Suspension Reason"
 msgstr "Motivo de Suspensão SPMS"
 
 #. module: l10n_pt_spms
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_res_partner__spms_information
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_res_users__spms_information
+msgid "Spms Information"
+msgstr "Informação SPMS"
+
+#. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_product__spms_lot_id
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_template__spms_lot_id
 msgid "Spms Lot"
@@ -180,18 +175,13 @@ msgid "Suspension Reason"
 msgstr "Motivo de Suspensão"
 
 #. module: l10n_pt_spms
-#: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_context_code_uniq
-#: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_prescription_type_code_uniq
-#: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_suspension_reason_code_uniq
+#: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_context_uniq
+#: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_prescription_type_uniq
+#: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_suspension_reason_uniq
 msgid "The code must be unique"
-msgstr "O código deve ser único"
+msgstr " O código deve ser único"
 
 #. module: l10n_pt_spms
-#: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_lot_name_uniq
-msgid "The name of the lot must be unique."
-msgstr "O nome do lote deve ser único."
-
-#. module: l10n_pt_spms
-#: model:ir.model,name:l10n_pt_spms.model_spms_context
-msgid "spms.context"
-msgstr ""
+#: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_lot_uniq
+msgid "The code of the lot must be unique."
+msgstr "O código do lote deve ser único."
