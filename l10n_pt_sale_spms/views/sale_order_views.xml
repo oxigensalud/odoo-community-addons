@@ -14,7 +14,7 @@
                 <button
                     name="action_view_spms_sale_order_line"
                     type="object"
-                    icon="fa-eye"
+                    icon="fa-bullseye"
                     class="btn-primary"
                     attrs="{'invisible': [('spms_information', '=', False)]}"
                 />
