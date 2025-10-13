@@ -21,9 +21,9 @@
     <record id="spms_lot_tree_view" model="ir.ui.view">
         <field name="model">spms.lot</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -39,7 +39,7 @@
     <record id="spms_lot_act_window" model="ir.actions.act_window">
         <field name="name">SPMS Lot</field>
         <field name="res_model">spms.lot</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="domain">[]</field>
         <field name="context">{}</field>
     </record>
