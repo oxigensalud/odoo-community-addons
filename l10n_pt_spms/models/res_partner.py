@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class ResPartner(models.Model):
-
     _inherit = "res.partner"
 
     spms_information = fields.Boolean()
