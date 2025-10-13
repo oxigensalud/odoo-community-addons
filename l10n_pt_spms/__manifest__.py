@@ -6,9 +6,9 @@
 {
     "name": "SPMS base",
     "summary": "SPMS base models and fields",
-    "version": "14.0.1.0.0",
+    "version": "18.0.1.0.0",
     "license": "AGPL-3",
-    "author": "Dixmit, NuoBiT Solutions S.L.",
+    "author": "Dixmit, NuoBiT Solutions SL, Oxigen Salud SA",
     "website": "https://github.com/oxigensalud/odoo-community-addons",
     "depends": ["account"],
     "data": [
