@@ -12,42 +12,42 @@
                         <field
                             name="spms_prescription"
                             string="Prescription"
-                            attrs="{'readonly': [('state', '=', 'done')]}"
+                            readonly="state == 'done'"
                         />
                         <field
                             name="spms_user_number"
                             string="User Number"
-                            attrs="{'readonly': [('state', '=', 'done')]}"
+                            readonly="state == 'done'"
                         />
                         <field
                             name="spms_beneficiary_number"
                             string="Beneficiary Number"
-                            attrs="{'readonly': [('state', '=', 'done')]}"
+                            readonly="state == 'done'"
                         />
                         <field
                             name="spms_start_date"
                             string="Start Date"
-                            attrs="{'readonly': [('state', '=', 'done')]}"
+                            readonly="state == 'done'"
                         />
                         <field
                             name="spms_end_date"
                             string="End Date"
-                            attrs="{'readonly': [('state', '=', 'done')]}"
+                            readonly="state == 'done'"
                         />
                         <field
                             name="spms_suspension_reason_id"
                             string="Suspension Reason Code"
-                            attrs="{'readonly': [('state', '=', 'done')]}"
+                            readonly="state == 'done'"
                         />
                         <field
                             name="spms_context_id"
                             string="Context Code"
-                            attrs="{'readonly': [('state', '=', 'done')]}"
+                            readonly="state == 'done'"
                         />
                         <field
                             name="spms_prescription_type_id"
                             string="Prescription Type Code"
-                            attrs="{'readonly': [('state', '=', 'done')]}"
+                            readonly="state == 'done'"
                         />
                     </group>
                     <field name="state" invisible="1" />

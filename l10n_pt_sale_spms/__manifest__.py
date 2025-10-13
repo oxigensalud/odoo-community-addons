@@ -3,9 +3,9 @@
 {
     "name": "L10n PT Sale SPMS",
     "summary": "Portuguese Localization for Sale Orders with SPMS",
-    "version": "14.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Sales Management",
-    "author": "NuoBiT Solutions, S.L.",
+    "author": "NuoBiT Solutions SL, Oxigen Salud SA",
     "website": "https://github.com/oxigensalud/odoo-community-addons",
     "license": "AGPL-3",
     "depends": ["sale", "l10n_pt_spms"],
