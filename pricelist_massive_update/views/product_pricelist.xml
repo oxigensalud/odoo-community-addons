@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl) -->
+<!-- Copyright NuoBiT Solutions - Eric Antones <eantones@nuobit.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl) -->
 <odoo>
     <record id="price_list_tags_product_price_list_form_view" model="ir.ui.view">
         <field name="name">price.list.tags.product.price.list.form.view</field>

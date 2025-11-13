@@ -1,3 +1,5 @@
+# Copyright NuoBiT Solutions - Eric Antones <eantones@nuobit.com>
+# Copyright 2025 NuoBiT Solutions - Deniz Gallo <dgallo@nuobit.com>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html)
 from odoo import fields, models
 
@@ -6,7 +8,7 @@ class PriceListUpdate(models.Model):
     _name = "pricelist.update"
     _description = "Pricelist update"
 
-    name = fields.Char(string="Name", copy=False)
+    name = fields.Char(copy=False)
     company_id = fields.Many2one(
         comodel_name="res.company",
         string="Company",
@@ -16,7 +18,6 @@ class PriceListUpdate(models.Model):
     percentage = fields.Float(string="Percentage:")
     state = fields.Selection(
         selection=[("draft", "Draft"), ("processed", "Processed")],
-        string="State",
         required=True,
         readonly=True,
         copy=False,
