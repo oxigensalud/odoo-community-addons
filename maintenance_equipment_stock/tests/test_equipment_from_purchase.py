@@ -1,10 +1,11 @@
 # Copyright 2023 Dixmit
+# Copyright 2025 NuoBiT Solutions - Deniz Gallo <dgallo@nuobit.com>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo.tests.common import SavepointCase
+from odoo.tests.common import TransactionCase
 
 
-class TestEquipmentFromPurchase(SavepointCase):
+class TestEquipmentFromPurchase(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -12,7 +13,7 @@ class TestEquipmentFromPurchase(SavepointCase):
         cls.product = cls.env["product.template"].create(
             {
                 "name": "My Product",
-                "type": "product",
+                "is_storable": True,
                 "tracking": "serial",
                 "maintenance_lot": True,
             }
@@ -48,13 +49,14 @@ class TestEquipmentFromPurchase(SavepointCase):
         picking.move_ids_without_package.move_line_ids.write(
             {
                 "lot_name": "1234",
-                "qty_done": 1,
+                "quantity": 1,
             }
         )
         self.assertFalse(picking.maintenance_equipment_ids)
         picking.button_validate()
         self.assertTrue(picking.maintenance_equipment_ids)
-        action = picking.move_ids_without_package.move_line_ids.lot_id.action_lot_open_equipment()
+        without_package = picking.move_ids_without_package
+        action = without_package.move_line_ids.lot_id.action_lot_open_equipment()
         self.assertEqual(
             picking.maintenance_equipment_ids,
             self.env[action["res_model"]].browse(action["res_id"]),

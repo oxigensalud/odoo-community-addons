@@ -1,13 +1,14 @@
 # Copyright 2023 Dixmit
+# Copyright 2025 NuoBiT Solutions - Deniz Gallo <dgallo@nuobit.com>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 {
     "name": "Maintenance Equipment Stock",
     "summary": """
         Create equipments from stocks""",
-    "version": "14.0.1.0.0",
+    "version": "18.0.1.0.0",
     "license": "AGPL-3",
-    "author": "Dixmit",
+    "author": "Dixmit, Oxigen Salud SA, NuoBiT Solutions SL",
     "website": "https://github.com/oxigensalud/odoo-community-addons",
     "depends": [
         "maintenance",
@@ -15,11 +16,10 @@
         "product_brand",
     ],
     "data": [
-        "views/stock_picking.xml",
-        "views/stock_production_lot.xml",
+        "views/stock_picking_views.xml",
+        "views/stock_lot_views.xml",
         "views/stock_location_views.xml",
-        "views/maintenance_equipment.xml",
-        "views/product_template.xml",
+        "views/maintenance_equipment_views.xml",
+        "views/product_template_views.xml",
     ],
-    "demo": [],
 }

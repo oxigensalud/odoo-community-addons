@@ -1,5 +1,6 @@
 # Copyright 2023 Dixmit
 # Copyright NuoBiT Solutions - Frank Cespedes <fcespedes@nuobit.com>
+# Copyright 2025 NuoBiT Solutions - Deniz Gallo <dgallo@nuobit.com>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 from odoo import _, api, fields, models
@@ -10,7 +11,7 @@ class MaintenanceEquipment(models.Model):
     _inherit = "maintenance.equipment"
 
     lot_id = fields.Many2one(
-        "stock.production.lot", readonly=True, copy=False, tracking=True
+        comodel_name="stock.lot", readonly=True, copy=False, tracking=True
     )
     supplier_lot_number = fields.Char(
         compute="_compute_supplier_number",
@@ -19,15 +20,16 @@ class MaintenanceEquipment(models.Model):
         store=True,
     )
     supplier_product_id = fields.Many2one(
-        "product.product",
+        comodel_name="product.product",
         compute="_compute_supplier_product",
         inverse="_inverse_supplier_lot_number",
         domain=[
-            ("type", "=", "product"),
+            ("is_storable", "=", True),
             ("tracking", "=", "serial"),
         ],
         readonly=False,
         tracking=True,
+        search=True,
     )
     picking_id = fields.Many2one(
         comodel_name="stock.picking",
@@ -37,7 +39,9 @@ class MaintenanceEquipment(models.Model):
         domain=[("picking_type_id.code", "=", "incoming")],
         tracking=True,
     )
-    stock_move_line_id = fields.Many2one("stock.move.line", readonly=True, copy=False)
+    stock_move_line_id = fields.Many2one(
+        comodel_name="stock.move.line", readonly=True, copy=False
+    )
     purchase_id = fields.Many2one(
         comodel_name="purchase.order",
         compute="_compute_purchase",
@@ -76,7 +80,7 @@ class MaintenanceEquipment(models.Model):
                     }
                 )
             elif record.supplier_lot_number and record.supplier_product_id:
-                lot = self.env["stock.production.lot"].search(
+                lot = self.env["stock.lot"].search(
                     [
                         ("name", "=", record.supplier_lot_number),
                         ("product_id", "=", record.supplier_product_id.id),
@@ -85,7 +89,7 @@ class MaintenanceEquipment(models.Model):
                 if lot:
                     record.lot_id = lot
                 else:
-                    record.lot_id = self.env["stock.production.lot"].create(
+                    record.lot_id = self.env["stock.lot"].create(
                         {
                             "name": record.supplier_lot_number,
                             "product_id": record.supplier_product_id.id,
@@ -99,27 +103,31 @@ class MaintenanceEquipment(models.Model):
                 if rec.picking_id.picking_type_id.code != "incoming":
                     raise ValidationError(
                         _(
-                            "You have selected for the maintenance equipment %s the "
-                            "picking %s, which is not an incoming picking."
+                            "You have selected for the maintenance "
+                            "equipment %(equipment)s the picking "
+                            "%(picking)s, which is not an incoming picking."
                         )
-                        % (rec.name, rec.picking_id.name)
+                        % {"equipment": rec.name, "picking": rec.picking_id.name}
                     )
                 elif not rec.picking_id.purchase_id:
                     raise ValidationError(
                         _(
-                            "You have selected for the maintenance equipment %s the "
-                            "picking %s, which is not linked to any purchase."
+                            "You have selected for the maintenance "
+                            "equipment %(equipment)s the picking "
+                            "%(picking)s, which is not linked to "
+                            "any purchase."
                         )
-                        % (rec.name, rec.picking_id.name)
+                        % {"equipment": rec.name, "picking": rec.picking_id.name}
                     )
                 elif rec.purchase_id != rec.picking_id.purchase_id:
                     raise ValidationError(
                         _(
-                            "You have selected for the maintenance equipment %s the "
-                            "picking %s, which is not linked to the same purchase "
-                            "you have selected."
+                            "You have selected for the maintenance "
+                            "equipment %(equipment)s the picking"
+                            " %(picking)s, which is not linked to "
+                            "the same purchase you have selected."
                         )
-                        % (rec.name, rec.picking_id.name)
+                        % {"equipment": rec.name, "picking": rec.picking_id.name}
                     )
             else:
                 if rec.purchase_id:

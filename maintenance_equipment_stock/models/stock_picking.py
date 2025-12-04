@@ -1,4 +1,5 @@
 # Copyright 2023 Dixmit
+# Copyright 2025 NuoBiT Solutions - Deniz Gallo <dgallo@nuobit.com>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 from odoo import fields, models
@@ -8,7 +9,7 @@ class StockPicking(models.Model):
     _inherit = "stock.picking"
 
     maintenance_equipment_ids = fields.One2many(
-        "maintenance.equipment", inverse_name="picking_id"
+        comodel_name="maintenance.equipment", inverse_name="picking_id"
     )
     maintenance_equipment_count = fields.Integer(
         compute="_compute_maintenance_equipment_count"
