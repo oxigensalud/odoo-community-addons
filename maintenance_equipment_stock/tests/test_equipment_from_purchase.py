@@ -54,9 +54,7 @@ class TestEquipmentFromPurchase(SavepointCase):
         self.assertFalse(picking.maintenance_equipment_ids)
         picking.button_validate()
         self.assertTrue(picking.maintenance_equipment_ids)
-        action = (
-            picking.move_ids_without_package.move_line_ids.lot_id.action_lot_open_equipment()
-        )
+        action = picking.move_ids_without_package.move_line_ids.lot_id.action_lot_open_equipment()
         self.assertEqual(
             picking.maintenance_equipment_ids,
             self.env[action["res_model"]].browse(action["res_id"]),
