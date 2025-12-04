@@ -1,5 +1,6 @@
 # Copyright 2023 Dixmit
 # Copyright NuoBiT - Frank Cespedes <fcespedes@nuobit.com>
+# Copyright 2025 NuoBiT Solutions - Deniz Gallo <dgallo@nuobit.com>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 from odoo import _, models
@@ -51,7 +52,7 @@ class StockMoveLine(models.Model):
         result = super()._action_done()
         for ml in self.filtered(lambda m: m.exists()):
             if (
-                ml.product_id.type == "product"
+                ml.product_id.is_storable
                 and ml.product_id.tracking == "serial"
                 and ml.move_id.picking_type_id.code in ["incoming", "internal"]
             ):
