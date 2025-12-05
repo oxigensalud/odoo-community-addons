@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class MaintenanceRequest(models.Model):
-
     _inherit = "maintenance.request"
 
     sale_order_id = fields.Many2one(

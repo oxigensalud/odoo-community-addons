@@ -50,7 +50,6 @@ class TestsaleOrder(common.SavepointCase):
         self.assertEqual(self.sale_order.maintenance_request_count, 2)
 
     def test_action_view_maintenance_request(self):
-
         result = self.sale_order.action_view_maintenance_request()
         self.assertTrue(result)
         self.assertIn("context", result)
