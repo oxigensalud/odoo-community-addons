@@ -8,7 +8,9 @@ class SaleOrder(models.Model):
     _inherit = "sale.order"
 
     maintenance_request_ids = fields.One2many(
-        "maintenance.request", "sale_order_id", string="Maintenance Requests"
+        comodel_name="maintenance.request",
+        inverse_name="sale_order_id",
+        string="Maintenance Requests",
     )
 
     maintenance_request_count = fields.Integer(

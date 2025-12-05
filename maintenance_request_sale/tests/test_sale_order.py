@@ -1,10 +1,11 @@
 # Copyright 2023 Dixmit
+# Copyright 2025 NuoBiT Solutions - Deniz Gallo <dgallo@nuobit.com>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo.tests import common
+from odoo.tests.common import TransactionCase
 
 
-class TestsaleOrder(common.SavepointCase):
+class TestsaleOrder(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
