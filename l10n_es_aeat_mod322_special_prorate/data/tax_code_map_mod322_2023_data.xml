@@ -5,17 +5,17 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bi')),
+                (4, ref('p_priva4_ic_bc')),
+                (4, ref('p_priva4_sp_in')),
+                (4, ref('p_priva4_ic_bi')),
+                (4, ref('p_priva10_ic_bc')),
+                (4, ref('p_priva10_sp_in')),
+                (4, ref('p_priva10_ic_bi')),
+                (4, ref('p_priva21_ic_bc')),
+                (4, ref('p_priva21_sp_in')),
+                (4, ref('p_priva21_ic_bi')),
             ]"
         />
     </record>
@@ -25,17 +25,17 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bi')),
+                (4, ref('p_priva4_ic_bc')),
+                (4, ref('p_priva4_sp_in')),
+                (4, ref('p_priva4_ic_bi')),
+                (4, ref('p_priva10_ic_bc')),
+                (4, ref('p_priva10_sp_in')),
+                (4, ref('p_priva10_ic_bi')),
+                (4, ref('p_priva21_ic_bc')),
+                (4, ref('p_priva21_sp_in')),
+                (4, ref('p_priva21_ic_bi')),
             ]"
         />
     </record>
@@ -45,17 +45,17 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bi')),
+                (4, ref('p_priva4_ic_bc')),
+                (4, ref('p_priva4_sp_in')),
+                (4, ref('p_priva4_ic_bi')),
+                (4, ref('p_priva10_ic_bc')),
+                (4, ref('p_priva10_sp_in')),
+                (4, ref('p_priva10_ic_bi')),
+                (4, ref('p_priva21_ic_bc')),
+                (4, ref('p_priva21_sp_in')),
+                (4, ref('p_priva21_ic_bi')),
            ]"
         />
     </record>
@@ -65,17 +65,17 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bi')),
+                (4, ref('p_priva4_ic_bc')),
+                (4, ref('p_priva4_sp_in')),
+                (4, ref('p_priva4_ic_bi')),
+                (4, ref('p_priva10_ic_bc')),
+                (4, ref('p_priva10_sp_in')),
+                (4, ref('p_priva10_ic_bi')),
+                (4, ref('p_priva21_ic_bc')),
+                (4, ref('p_priva21_sp_in')),
+                (4, ref('p_priva21_ic_bi')),
             ]"
         />
     </record>
@@ -85,17 +85,17 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bi')),
+                (4, ref('p_priva4_ic_bc')),
+                (4, ref('p_priva4_sp_in')),
+                (4, ref('p_priva4_ic_bi')),
+                (4, ref('p_priva10_ic_bc')),
+                (4, ref('p_priva10_sp_in')),
+                (4, ref('p_priva10_ic_bi')),
+                (4, ref('p_priva21_ic_bc')),
+                (4, ref('p_priva21_sp_in')),
+                (4, ref('p_priva21_ic_bi')),
            ]"
         />
     </record>
@@ -105,17 +105,17 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bi')),
+                (4, ref('p_priva4_ic_bc')),
+                (4, ref('p_priva4_sp_in')),
+                (4, ref('p_priva4_ic_bi')),
+                (4, ref('p_priva10_ic_bc')),
+                (4, ref('p_priva10_sp_in')),
+                (4, ref('p_priva10_ic_bi')),
+                (4, ref('p_priva21_ic_bc')),
+                (4, ref('p_priva21_sp_in')),
+                (4, ref('p_priva21_ic_bi')),
             ]"
         />
     </record>
@@ -125,15 +125,15 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva5_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_bc')),
+                (4, ref('p_priva4_sc')),
+                (4, ref('p_priva4_bc')),
+                (4, ref('p_priva5_sc')),
+                (4, ref('p_priva10_sc')),
+                (4, ref('p_priva10_bc')),
+                (4, ref('p_priva21_sc')),
+                (4, ref('p_priva21_bc')),
             ]"
         />
     </record>
@@ -143,15 +143,15 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva5_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_bc')),
+                (4, ref('p_priva4_sc')),
+                (4, ref('p_priva4_bc')),
+                (4, ref('p_priva5_sc')),
+                (4, ref('p_priva10_sc')),
+                (4, ref('p_priva10_bc')),
+                (4, ref('p_priva21_sc')),
+                (4, ref('p_priva21_bc')),
             ]"
         />
     </record>
@@ -161,11 +161,11 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_bi'))
+                (4, ref('p_priva4_bi')),
+                (4, ref('p_priva10_bi')),
+                (4, ref('p_priva21_bi'))
             ]"
         />
     </record>
@@ -174,13 +174,12 @@
         id="l10n_es_aeat_mod322.aeat_mod322_2023_map_line_42"
         model="l10n.es.aeat.map.tax.line"
     >
-        <field name="account_id" ref="l10n_es.account_common_472" />
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_bi'))
+                (4, ref('p_priva4_bi')),
+                (4, ref('p_priva10_bi')),
+                (4, ref('p_priva21_bi'))
             ]"
         />
     </record>
@@ -190,33 +189,33 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ibc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ibi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva5_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ibc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ibi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ibc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ibi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sp_in')),
+                (4, ref('p_priva4_bc')),
+                (4, ref('p_priva4_sc')),
+                (4, ref('p_priva4_bi')),
+                (4, ref('p_priva4_ibc')),
+                (4, ref('p_priva4_ibi')),
+                (4, ref('p_priva4_ic_bc')),
+                (4, ref('p_priva4_ic_bi')),
+                (4, ref('p_priva4_sp_in')),
+                (4, ref('p_priva5_sc')),
+                (4, ref('p_priva10_bc')),
+                (4, ref('p_priva10_sc')),
+                (4, ref('p_priva10_bi')),
+                (4, ref('p_priva10_ibc')),
+                (4, ref('p_priva10_ibi')),
+                (4, ref('p_priva10_ic_bc')),
+                (4, ref('p_priva10_ic_bi')),
+                (4, ref('p_priva10_sp_in')),
+                (4, ref('p_priva21_bc')),
+                (4, ref('p_priva21_sc')),
+                (4, ref('p_priva21_bi')),
+                (4, ref('p_priva21_ibc')),
+                (4, ref('p_priva21_ibi')),
+                (4, ref('p_priva21_ic_bc')),
+                (4, ref('p_priva21_ic_bi')),
+                (4, ref('p_priva21_sp_in')),
             ]"
         />
     </record>
@@ -226,33 +225,33 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ibc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ibi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva5_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ibc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ibi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ibc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ibi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sp_in')),
+                (4, ref('p_priva4_bc')),
+                (4, ref('p_priva4_sc')),
+                (4, ref('p_priva4_bi')),
+                (4, ref('p_priva4_ibc')),
+                (4, ref('p_priva4_ibi')),
+                (4, ref('p_priva4_ic_bc')),
+                (4, ref('p_priva4_ic_bi')),
+                (4, ref('p_priva4_sp_in')),
+                (4, ref('p_priva5_sc')),
+                (4, ref('p_priva10_bc')),
+                (4, ref('p_priva10_sc')),
+                (4, ref('p_priva10_bi')),
+                (4, ref('p_priva10_ibc')),
+                (4, ref('p_priva10_ibi')),
+                (4, ref('p_priva10_ic_bc')),
+                (4, ref('p_priva10_ic_bi')),
+                (4, ref('p_priva10_sp_in')),
+                (4, ref('p_priva21_bc')),
+                (4, ref('p_priva21_sc')),
+                (4, ref('p_priva21_bi')),
+                (4, ref('p_priva21_ibc')),
+                (4, ref('p_priva21_ibi')),
+                (4, ref('p_priva21_ic_bc')),
+                (4, ref('p_priva21_ic_bi')),
+                (4, ref('p_priva21_sp_in')),
             ]"
         />
     </record>
@@ -261,15 +260,15 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva5_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_bc')),
+                (4, ref('p_priva4_sc')),
+                (4, ref('p_priva4_bc')),
+                (4, ref('p_priva5_sc')),
+                (4, ref('p_priva10_sc')),
+                (4, ref('p_priva10_bc')),
+                (4, ref('p_priva21_sc')),
+                (4, ref('p_priva21_bc')),
             ]"
         />
     </record>
@@ -279,15 +278,15 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva5_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_bc')),
+                (4, ref('p_priva4_sc')),
+                (4, ref('p_priva4_bc')),
+                (4, ref('p_priva5_sc')),
+                (4, ref('p_priva10_sc')),
+                (4, ref('p_priva10_bc')),
+                (4, ref('p_priva21_sc')),
+                (4, ref('p_priva21_bc')),
             ]"
         />
     </record>
@@ -297,11 +296,11 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_bi'))
+                (4, ref('p_priva4_bi')),
+                (4, ref('p_priva10_bi')),
+                (4, ref('p_priva21_bi'))
             ]"
         />
     </record>
@@ -310,13 +309,12 @@
         id="l10n_es_aeat_mod322.aeat_mod322_2023_map_line_48"
         model="l10n.es.aeat.map.tax.line"
     >
-        <field name="account_id" ref="l10n_es.account_common_472" />
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_bi'))
+                (4, ref('p_priva4_bi')),
+                (4, ref('p_priva10_bi')),
+                (4, ref('p_priva21_bi'))
             ]"
         />
     </record>
@@ -325,11 +323,11 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ibc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ibc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ibc'))
+                (4, ref('p_priva4_ibc')),
+                (4, ref('p_priva10_ibc')),
+                (4, ref('p_priva21_ibc'))
             ]"
         />
     </record>
@@ -338,13 +336,12 @@
         id="l10n_es_aeat_mod322.aeat_mod322_2023_map_line_50"
         model="l10n.es.aeat.map.tax.line"
     >
-        <field name="account_id" ref="l10n_es.account_common_472" />
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ibc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ibc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ibc')),
+                (4, ref('p_priva4_ibc')),
+                (4, ref('p_priva10_ibc')),
+                (4, ref('p_priva21_ibc')),
             ]"
         />
     </record>
@@ -354,11 +351,11 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ibi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ibi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ibi'))
+                (4, ref('p_priva4_ibi')),
+                (4, ref('p_priva10_ibi')),
+                (4, ref('p_priva21_ibi'))
             ]"
         />
     </record>
@@ -368,11 +365,11 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ibi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ibi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ibi'))
+                (4, ref('p_priva4_ibi')),
+                (4, ref('p_priva10_ibi')),
+                (4, ref('p_priva21_ibi'))
             ]"
         />
     </record>
@@ -382,14 +379,14 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sp_in'))
+                (4, ref('p_priva4_ic_bc')),
+                (4, ref('p_priva4_sp_in')),
+                (4, ref('p_priva10_ic_bc')),
+                (4, ref('p_priva10_sp_in')),
+                (4, ref('p_priva21_ic_bc')),
+                (4, ref('p_priva21_sp_in'))
             ]"
         />
     </record>
@@ -399,14 +396,14 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sp_in'))
+                (4, ref('p_priva4_ic_bc')),
+                (4, ref('p_priva4_sp_in')),
+                (4, ref('p_priva10_ic_bc')),
+                (4, ref('p_priva10_sp_in')),
+                (4, ref('p_priva21_ic_bc')),
+                (4, ref('p_priva21_sp_in'))
             ]"
         />
     </record>
@@ -416,11 +413,11 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bi'))
+                (4, ref('p_priva4_ic_bi')),
+                (4, ref('p_priva10_ic_bi')),
+                (4, ref('p_priva21_ic_bi'))
             ]"
         />
     </record>
@@ -430,11 +427,11 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bi'))
+                (4, ref('p_priva4_ic_bi')),
+                (4, ref('p_priva10_ic_bi')),
+                (4, ref('p_priva21_ic_bi'))
             ]"
         />
     </record>
@@ -444,33 +441,33 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ibc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ibi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva5_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ibc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ibi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ibc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ibi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sp_in')),
+                (4, ref('p_priva4_bc')),
+                (4, ref('p_priva4_sc')),
+                (4, ref('p_priva4_bi')),
+                (4, ref('p_priva4_ibc')),
+                (4, ref('p_priva4_ibi')),
+                (4, ref('p_priva4_ic_bc')),
+                (4, ref('p_priva4_ic_bi')),
+                (4, ref('p_priva4_sp_in')),
+                (4, ref('p_priva5_sc')),
+                (4, ref('p_priva10_bc')),
+                (4, ref('p_priva10_sc')),
+                (4, ref('p_priva10_bi')),
+                (4, ref('p_priva10_ibc')),
+                (4, ref('p_priva10_ibi')),
+                (4, ref('p_priva10_ic_bc')),
+                (4, ref('p_priva10_ic_bi')),
+                (4, ref('p_priva10_sp_in')),
+                (4, ref('p_priva21_bc')),
+                (4, ref('p_priva21_sc')),
+                (4, ref('p_priva21_bi')),
+                (4, ref('p_priva21_ibc')),
+                (4, ref('p_priva21_ibi')),
+                (4, ref('p_priva21_ic_bc')),
+                (4, ref('p_priva21_ic_bi')),
+                (4, ref('p_priva21_sp_in')),
             ]"
         />
     </record>
@@ -480,33 +477,33 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ibc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ibi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva4_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva5_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ibc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ibi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva10_sp_in')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ibc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ibi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bc')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bi')),
-                (4, ref('l10n_es_special_prorate.account_tax_template_p_priva21_sp_in')),
+                (4, ref('p_priva4_bc')),
+                (4, ref('p_priva4_sc')),
+                (4, ref('p_priva4_bi')),
+                (4, ref('p_priva4_ibc')),
+                (4, ref('p_priva4_ibi')),
+                (4, ref('p_priva4_ic_bc')),
+                (4, ref('p_priva4_ic_bi')),
+                (4, ref('p_priva4_sp_in')),
+                (4, ref('p_priva5_sc')),
+                (4, ref('p_priva10_bc')),
+                (4, ref('p_priva10_sc')),
+                (4, ref('p_priva10_bi')),
+                (4, ref('p_priva10_ibc')),
+                (4, ref('p_priva10_ibi')),
+                (4, ref('p_priva10_ic_bc')),
+                (4, ref('p_priva10_ic_bi')),
+                (4, ref('p_priva10_sp_in')),
+                (4, ref('p_priva21_bc')),
+                (4, ref('p_priva21_sc')),
+                (4, ref('p_priva21_bi')),
+                (4, ref('p_priva21_ibc')),
+                (4, ref('p_priva21_ibi')),
+                (4, ref('p_priva21_ic_bc')),
+                (4, ref('p_priva21_ic_bi')),
+                (4, ref('p_priva21_sp_in')),
             ]"
         />
     </record>
@@ -517,17 +514,17 @@
         <field name="to_regularize" eval="False" />
         <field name="field_type">base</field>
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[(6, False, [
-                ref('l10n_es_special_prorate.account_tax_template_p_priva10_bi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva10_ibi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva21_bi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva21_ibi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva4_bi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva4_ibi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bi'),
+                ref('p_priva10_bi'),
+                ref('p_priva10_ibi'),
+                ref('p_priva10_ic_bi'),
+                ref('p_priva21_bi'),
+                ref('p_priva21_ibi'),
+                ref('p_priva21_ic_bi'),
+                ref('p_priva4_bi'),
+                ref('p_priva4_ibi'),
+                ref('p_priva4_ic_bi'),
             ])]"
         />
     </record>
@@ -536,35 +533,34 @@
         model="l10n.es.aeat.map.tax.line"
     >
         <field name="to_regularize" eval="False" />
-        <field name="account_id" ref="l10n_es.account_common_472" />
         <field
-            name="tax_ids"
+            name="tax_xmlid_ids"
             eval="[(6, False, [
-                ref('l10n_es_special_prorate.account_tax_template_p_priva10_bc'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva10_bi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva10_ibc'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva10_ibi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bc'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva10_ic_bi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva10_sc'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva10_sp_in'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva21_bc'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva21_bi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva21_ibc'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva21_ibi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bc'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva21_ic_bi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva21_sc'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva21_sp_in'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva4_bc'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva4_bi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva4_ibc'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva4_ibi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bc'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva4_ic_bi'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva4_sc'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva4_sp_in'),
-                ref('l10n_es_special_prorate.account_tax_template_p_priva5_sc'),
+                ref('p_priva10_bc'),
+                ref('p_priva10_bi'),
+                ref('p_priva10_ibc'),
+                ref('p_priva10_ibi'),
+                ref('p_priva10_ic_bc'),
+                ref('p_priva10_ic_bi'),
+                ref('p_priva10_sc'),
+                ref('p_priva10_sp_in'),
+                ref('p_priva21_bc'),
+                ref('p_priva21_bi'),
+                ref('p_priva21_ibc'),
+                ref('p_priva21_ibi'),
+                ref('p_priva21_ic_bc'),
+                ref('p_priva21_ic_bi'),
+                ref('p_priva21_sc'),
+                ref('p_priva21_sp_in'),
+                ref('p_priva4_bc'),
+                ref('p_priva4_bi'),
+                ref('p_priva4_ibc'),
+                ref('p_priva4_ibi'),
+                ref('p_priva4_ic_bc'),
+                ref('p_priva4_ic_bi'),
+                ref('p_priva4_sc'),
+                ref('p_priva4_sp_in'),
+                ref('p_priva5_sc'),
             ])]"
         />
     </record>
