@@ -1,3 +1,4 @@
+# Copyright 2026 NuoBiT Solutions SL - Deniz Gallo <dgallo@nuobit.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
 
 from odoo import _, api, models
@@ -6,20 +7,6 @@ from odoo.exceptions import ValidationError
 
 class L10nEsAeatMod322Report(models.AbstractModel):
     _inherit = "l10n.es.aeat.mod322.report"
-
-    # TODO: Move this method to a computed field.
-    def _get_prorate_year(self, company, year):
-        prorate_year = self.env["aeat.map.special.prorrate.year"].get_by_ukey(
-            company.id, year
-        )
-        if not prorate_year:
-            raise ValidationError(
-                _("Prorate not found in company %s in the year %s")
-                % (company.display_name, year)
-            )
-        if prorate_year.state not in ("closed", "finale"):
-            raise ValidationError(_("Prorrate year is not closed"))
-        return prorate_year
 
     def _prepare_tax_line_vals_dates(self, date_start, date_end, map_line):
         date_values = {
@@ -39,10 +26,16 @@ class L10nEsAeatMod322Report(models.AbstractModel):
             if rec.date_start.year != rec.year or rec.date_end.year != rec.year:
                 raise ValidationError(
                     _(
-                        "The year: %s of the model 322 and the year of "
-                        "date start and date end (%s, %s) must be the same."
-                        % (rec.year, rec.date_start.year, rec.date_end.year)
+                        "The year: %(year)s of the model 322 and the year of "
+                        "date start and date end "
+                        "(%(date_start_year)s, %(date_end_year)s) "
+                        "must be the same."
                     )
+                    % {
+                        "year": rec.year,
+                        "date_start_year": rec.date_start.year,
+                        "date_end_year": rec.date_end.year,
+                    }
                 )
 
     def _eligible_prorate_period(self):
