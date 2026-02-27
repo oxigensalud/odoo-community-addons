@@ -1,3 +1,4 @@
+# Copyright 2026 NuoBiT Solutions SL - Deniz Gallo <dgallo@nuobit.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
 import datetime
 
@@ -12,7 +13,6 @@ class L10nEsAeatMod322Report(models.AbstractModel):
         string="[61] Prorate Regularization",
         default=0,
         compute="_compute_field_61",
-        states={"done": [("readonly", True)]},
         help="Prorate regularization by application of the final percentage.",
     )
 
@@ -26,7 +26,7 @@ class L10nEsAeatMod322Report(models.AbstractModel):
     counterpart_prorate_receivable_account_id = fields.Many2one(
         comodel_name="account.account",
         string="Counterpart Prorate Account Receivable",
-        domain="[('company_id', '=', company_id)]",
+        domain="[('company_ids', 'in', company_id)]",
         compute="_compute_counterpart_prorate_receivable_account_id",
         store=True,
         readonly=False,
@@ -36,16 +36,14 @@ class L10nEsAeatMod322Report(models.AbstractModel):
     def _compute_counterpart_prorate_receivable_account_id(self):
         for rec in self:
             rec.counterpart_prorate_receivable_account_id = (
-                rec.get_account_from_template(
-                    self.env.ref("l10n_es.account_common_6391")
-                )
+                rec.company_id._get_account_id_from_xmlid("account_common_6391")
             )
 
     counterpart_prorate_payable_account_id = fields.Many2one(
         comodel_name="account.account",
         string="Counterpart Prorate Payable Account",
         compute="_compute_counterpart_prorate_payable_account_id",
-        domain="[('company_id', '=', company_id)]",
+        domain="[('company_ids', 'in', company_id)]",
         store=True,
         readonly=False,
     )
@@ -53,8 +51,8 @@ class L10nEsAeatMod322Report(models.AbstractModel):
     @api.depends("company_id")
     def _compute_counterpart_prorate_payable_account_id(self):
         for rec in self:
-            rec.counterpart_prorate_payable_account_id = rec.get_account_from_template(
-                self.env.ref("l10n_es.account_common_6341")
+            rec.counterpart_prorate_payable_account_id = (
+                rec.company_id._get_account_id_from_xmlid("account_common_6341")
             )
 
     def _process_tax_line_regularization_prorate(self, tax_lines):
@@ -72,15 +70,22 @@ class L10nEsAeatMod322Report(models.AbstractModel):
             )
 
         lines = []
-        prorate_year = self._get_prorate_year(self.company_id, self.year)
+        prorate_year = self.prorate_year_id
         precision = self.env["decimal.precision"].precision_get("Account")
         for group in groups:
             old_balance = group["debit"] - group["credit"]
-            new_balance = round(
-                old_balance
-                * (1 - prorate_year.tax_final_percentage / prorate_year.tax_percentage),
-                precision,
-            )
+            if not prorate_year.tax_percentage:
+                new_balance = 0.0
+            else:
+                new_balance = round(
+                    old_balance
+                    * (
+                        1
+                        - prorate_year.tax_final_percentage
+                        / prorate_year.tax_percentage
+                    ),
+                    precision,
+                )
             # prorate
             if new_balance:
                 group["debit"] = new_balance if new_balance > 0 else 0
@@ -104,16 +109,20 @@ class L10nEsAeatMod322Report(models.AbstractModel):
                     datetime.date(self.year, 12, 31),
                     map_line,
                 )
-                prorate_year = self._get_prorate_year(self.company_id, self.year)
+                prorate_year = self.prorate_year_id
                 self.env["decimal.precision"].precision_get("Account")
-                # TODO: tax_percentage is 0 --> error?
-                res["amount"] = res["amount"] * (
-                    1 - prorate_year.tax_final_percentage / prorate_year.tax_percentage
-                )
+                if prorate_year.tax_percentage:
+                    res["amount"] = res["amount"] * (
+                        1
+                        - prorate_year.tax_final_percentage
+                        / prorate_year.tax_percentage
+                    )
+                else:
+                    res["amount"] = 0
         return res
 
     def create_regularization_move(self):
-        super().create_regularization_move()
+        res = super().create_regularization_move()
         if self._eligible_prorate_period():
             if any(
                 [
@@ -129,6 +138,7 @@ class L10nEsAeatMod322Report(models.AbstractModel):
                     )
                 )
             self.create_regularization_move_prorate()
+        return res
 
     def create_regularization_move_prorate(self):
         self.ensure_one()
