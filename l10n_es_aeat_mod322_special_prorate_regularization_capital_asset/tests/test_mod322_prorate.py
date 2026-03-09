@@ -242,7 +242,7 @@ class TestL10nEsAeatMod322Base(TestL10nEsAeatModBase):
             _logger.debug("{:>14} {:>9}".format("PURCHASE TAX", "PRICE"))
         for desc, values in cls.taxes_asset_purchase.items():
             if cls.debug:
-                _logger.debug("{:>14} {:>9}".format(desc, values[0]))
+                _logger.debug(f"{desc:>14} {values[0]:>9}")
             # Allow to duplicate taxes skipping the unique key constraint
             line_data = {
                 "name": "Test for tax(es) %s" % desc,
