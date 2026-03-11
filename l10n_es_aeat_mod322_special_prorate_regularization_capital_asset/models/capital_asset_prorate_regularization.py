@@ -1,4 +1,5 @@
 # Copyright Dixmit
+# Copyright 2026 NuoBiT Solutions SL - Deniz Gallo <dgallo@nuobit.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
 
 
@@ -24,22 +25,28 @@ class AssetProrateRegularization(models.Model):
                 raise ValidationError(
                     _(
                         "This asset have a prorate regularization"
-                        " line this year: %s, but it's not related"
+                        " line this year: %(year)s, but it's not related"
                         " with a model 322. Please, review prorate"
-                        " regularizations of capital asset: %s"
+                        " regularizations of capital asset: %(asset)s"
                     )
-                    % (mod322.year, self.mapped("asset_id.name"))
+                    % {
+                        "year": mod322.year,
+                        "asset": self.mapped("asset_id.name"),
+                    }
                 )
-            elif asset_regularization_line.mod303_id != mod322:
+            elif asset_regularization_line.mod322_id != mod322:
                 raise ValidationError(
                     _(
                         "This asset have a prorate regularization"
-                        " line this year: %s,"
-                        " but related with another model 303. "
+                        " line this year: %(year)s,"
+                        " but related with another model 322. "
                         "Please, review prorate regularizations "
-                        "of capital asset: %s"
+                        "of capital asset: %(asset)s"
                     )
-                    % (mod322.year, self.mapped("asset_id.name"))
+                    % {
+                        "year": mod322.year,
+                        "asset": self.mapped("asset_id.name"),
+                    }
                 )
         return asset_regularization_line
 
