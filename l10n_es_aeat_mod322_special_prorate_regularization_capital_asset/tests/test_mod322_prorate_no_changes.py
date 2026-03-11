@@ -1,4 +1,5 @@
 # Copyright 2023 Dixmit
+# Copyright 2026 NuoBiT Solutions SL - Deniz Gallo <dgallo@nuobit.com>
 # License AGPL-3 - See https://www.gnu.org/licenses/agpl-3.0
 
 import logging
@@ -143,7 +144,7 @@ class TestL10nEsAeatMod322Base(TestL10nEsAeatModBase):
         codes = {"203000", "280300"}
         for code in codes:
             cls.accounts[code] = cls.env["account.account"].search(
-                [("company_id", "=", cls.company.id), ("code", "=", code)]
+                [("company_ids", "=", cls.company.id), ("code", "=", code)]
             )
         return super()._accounts_search()
 
@@ -151,7 +152,7 @@ class TestL10nEsAeatMod322Base(TestL10nEsAeatModBase):
     def setUpClass(cls):
         super().setUpClass()
         # Create model
-        cls.company.write({"vat": "1234567890", "l10n_es_prorate_enabled": True})
+        cls.company.write({"vat": "ESA12345674", "l10n_es_prorate_enabled": True})
         cls.prorrate_map_2022 = cls.env["aeat.map.special.prorrate.year"].create(
             {
                 "year": 2022,
@@ -163,7 +164,7 @@ class TestL10nEsAeatMod322Base(TestL10nEsAeatModBase):
             {
                 "name": "9990000000322",
                 "company_id": cls.company.id,
-                "company_vat": "1234567890",
+                "company_vat": "ESA12345674",
                 "contact_name": "Test owner",
                 "statement_type": "N",
                 "support_type": "T",
@@ -218,7 +219,7 @@ class TestL10nEsAeatMod322Base(TestL10nEsAeatModBase):
                 "account_asset_id": cls.accounts["203000"].id,
                 "account_depreciation_id": cls.accounts["280300"].id,
                 "account_expense_depreciation_id": cls.accounts["280300"].id,
-                "capital_asset_type_id": cls.env.ref(
+                "default_capital_asset_type_id": cls.env.ref(
                     "l10n_es_account_capital_asset.account_capital_asset_type_data_normal"
                 ).id,
             }
@@ -237,7 +238,7 @@ class TestL10nEsAeatMod322Base(TestL10nEsAeatModBase):
             "journal_id": cls.journal_purchase.id,
             "invoice_line_ids": [],
         }
-        _logger.debug("Creating purchase invoice for asset: date = %s" % dt)
+        _logger.debug("Creating purchase invoice for asset: date = %s", dt)
         if cls.debug:
             _logger.debug("{:>14} {:>9}".format("PURCHASE TAX", "PRICE"))
         for desc, values in cls.taxes_asset_purchase.items():
@@ -245,7 +246,7 @@ class TestL10nEsAeatMod322Base(TestL10nEsAeatModBase):
                 _logger.debug(f"{desc:>14} {values[0]:>9}")
             # Allow to duplicate taxes skipping the unique key constraint
             line_data = {
-                "name": "Test for tax(es) %s" % desc,
+                "name": f"Test for tax(es) {desc}",
                 "account_id": cls.accounts["600000"].id,
                 "price_unit": values[0],
                 "quantity": 1,
@@ -265,30 +266,30 @@ class TestL10nEsAeatMod322Base(TestL10nEsAeatModBase):
 
     def _check_tax_lines(self):
         for field, result in iter(self.taxes_result.items()):
-            _logger.debug("Checking tax line: %s" % field)
+            _logger.debug("Checking tax line: %s", field)
             lines = self.model322.tax_line_ids.filtered(
-                lambda x: x.field_number == int(field)
+                lambda x, _field=field: x.field_number == int(_field)
             )
             self.assertAlmostEqual(
                 sum(lines.mapped("amount")),
                 result,
                 2,
-                "Incorrect result in field %s" % field,
+                f"Incorrect result in field {field}",
             )
 
     def test_calculate_last_period(self):
         self.prorrate_map_2023.compute_prorate()
         self.prorrate_map_2023.close_prorate()
         self.model322.button_calculate()
-        self.model322.invalidate_cache()
+        self.model322.invalidate_recordset()
         for field, result in iter(self.taxes_result_12.items()):
-            _logger.debug("Checking tax line: %s" % field)
+            _logger.debug("Checking tax line: %s", field)
             lines = self.model322.tax_line_ids.filtered(
-                lambda x: x.field_number == int(field)
+                lambda x, _field=field: x.field_number == int(_field)
             )
             self.assertAlmostEqual(
                 sum(lines.mapped("amount")),
                 result,
                 2,
-                "Incorrect result in field %s" % field,
+                f"Incorrect result in field {field}",
             )

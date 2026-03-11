@@ -1,4 +1,5 @@
 # Copyright Dixmit
+# Copyright 2026 NuoBiT Solutions SL - Deniz Gallo <dgallo@nuobit.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
 import datetime
 
@@ -13,7 +14,6 @@ class L10nEsAeatMod322Report(models.AbstractModel):
         string="[60] Capital Assets Prorate Regularization",
         default=0,
         compute="_compute_field_60",
-        states={"done": [("readonly", True)]},
         help="Capital assets regularization by application of the final percentage.",
     )
 
@@ -28,7 +28,7 @@ class L10nEsAeatMod322Report(models.AbstractModel):
         string="Counterpart Capital Assets Account Receivable",
         comodel_name="account.account",
         compute="_compute_counterpart_capital_assets_receivable_account_id",
-        domain="[('company_id', '=', company_id)]",
+        domain="[('company_ids', '=', company_id)]",
         store=True,
         readonly=False,
     )
@@ -37,16 +37,14 @@ class L10nEsAeatMod322Report(models.AbstractModel):
     def _compute_counterpart_capital_assets_receivable_account_id(self):
         for rec in self:
             rec.counterpart_capital_assets_receivable_account_id = (
-                rec.get_account_from_template(
-                    self.env.ref("l10n_es.account_common_6392")
-                )
+                rec.company_id._get_account_id_from_xmlid("account_common_6392")
             )
 
     counterpart_capital_assets_payable_account_id = fields.Many2one(
         string="Counterpart Capital Assets Payable Account",
         comodel_name="account.account",
         compute="_compute_counterpart_capital_assets_payable_account_id",
-        domain="[('company_id', '=', company_id)]",
+        domain="[('company_ids', '=', company_id)]",
         store=True,
         readonly=False,
     )
@@ -55,9 +53,7 @@ class L10nEsAeatMod322Report(models.AbstractModel):
     def _compute_counterpart_capital_assets_payable_account_id(self):
         for rec in self:
             rec.counterpart_capital_assets_payable_account_id = (
-                rec.get_account_from_template(
-                    self.env.ref("l10n_es.account_common_6342")
-                )
+                rec.company_id._get_account_id_from_xmlid("account_common_6342")
             )
 
     capital_asset_prorate_regularization_line_ids = fields.One2many(
@@ -124,7 +120,7 @@ class L10nEsAeatMod322Report(models.AbstractModel):
 
     def _process_tax_line_regularization_prorate_capital_asset(self, tax_lines):
         self.ensure_one()
-        prorate_year = self._get_prorate_year(self.company_id, self.year)
+        prorate_year = self.prorate_year_id
         precision = self.env["decimal.precision"].precision_get("Account")
         lines = []
         move_lines_values = self._prepare_move_lines(tax_lines)
@@ -190,7 +186,7 @@ class L10nEsAeatMod322Report(models.AbstractModel):
             datetime.date(self.year, 12, 31),
             map_line,
         )
-        prorate_year = self._get_prorate_year(self.company_id, self.year)
+        prorate_year = self.prorate_year_id
         prorate_max_diff = float(
             self.env["ir.config_parameter"]
             .sudo()
@@ -242,22 +238,22 @@ class L10nEsAeatMod322Report(models.AbstractModel):
                     raise ValidationError(
                         _(
                             "This asset have a prorate regularization"
-                            " line this year: %s, but it's not related"
+                            " line this year: %(year)s, but it's not related"
                             " with a model 322. Please, review prorate"
-                            " regularizations of capital asset: %s"
+                            " regularizations of capital asset: %(asset)s"
                         )
-                        % (self.year, asset.name)
+                        % {"year": self.year, "asset": asset.name}
                     )
                 elif asset_regularization_line.mod322_id != self:
                     raise ValidationError(
                         _(
                             "This asset have a prorate regularization"
-                            " line this year: %s,"
+                            " line this year: %(year)s,"
                             " but related with another model 322. "
                             "Please, review prorate regularizations "
-                            "of capital asset: %s"
+                            "of capital asset: %(asset)s"
                         )
-                        % (self.year, asset.name)
+                        % {"year": self.year, "asset": asset.name}
                     )
                 else:
                     asset_regularization_line.amount = asset_amount
@@ -290,7 +286,7 @@ class L10nEsAeatMod322Report(models.AbstractModel):
         return res
 
     def create_regularization_move(self):
-        super().create_regularization_move()
+        result = super().create_regularization_move()
         if self._eligible_prorate_period():
             if any(
                 [
@@ -301,10 +297,12 @@ class L10nEsAeatMod322Report(models.AbstractModel):
             ):
                 raise UserError(
                     _(
-                        "You must fill both journal and counterpart receivable/payable account."
+                        "You must fill both journal and counterpart"
+                        " receivable/payable account."
                     )
                 )
             self.create_regularization_move_prorate_capital_asset()
+        return result
 
     def create_regularization_move_prorate_capital_asset(self):
         self.ensure_one()
@@ -354,14 +352,17 @@ class L10nEsAeatMod322Report(models.AbstractModel):
         for rec in self:
             prorate_line_years = (
                 rec.capital_asset_prorate_regularization_line_ids.filtered(
-                    lambda x: x.year != rec.year
+                    lambda x, _rec=rec: x.year != _rec.year
                 )
             )
             if prorate_line_years:
                 raise ValidationError(
                     _(
-                        "The model 322 is linked in prorate lines in the year: %s."
-                        "Please review the assets: %s "
-                        % (rec.year, prorate_line_years.mapped("asset_id.name"))
+                        "The model 322 is linked in prorate lines in the"
+                        " year: %(year)s. Please review the assets: %(assets)s"
                     )
+                    % {
+                        "year": rec.year,
+                        "assets": prorate_line_years.mapped("asset_id.name"),
+                    }
                 )
