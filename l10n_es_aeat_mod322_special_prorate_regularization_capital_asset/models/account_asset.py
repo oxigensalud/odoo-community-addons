@@ -11,9 +11,8 @@ class AccountAsset(models.Model):
     def _active_capital_asset_prorate_regularization_domain(self):
         return expression.OR(
             [
-                super()._active_capital_asset_prorate_regularization_domain,
-                [("mod322_id", "=", False)][
-                    ("mod322_id.state", "in", ["posted", "done"]),
-                ],
+                super()._active_capital_asset_prorate_regularization_domain(),
+                [("mod322_id", "=", False)],
+                [("mod322_id.state", "in", ["posted", "done"])],
             ]
         )
