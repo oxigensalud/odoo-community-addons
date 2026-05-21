@@ -151,7 +151,13 @@ class TestL10nEsAeatMod322Base(TestL10nEsAeatModBase):
     def setUpClass(cls):
         super().setUpClass()
         # Create model
-        cls.company.write({"vat": "1234567890", "l10n_es_prorate_enabled": True})
+        cls.company.write(
+            {
+                "vat": "1234567890",
+                "l10n_es_prorate_enabled": True,
+                "l10n_es_capital_asset_enabled": True,
+            }
+        )
         cls.prorrate_map_2022 = cls.env["aeat.map.special.prorrate.year"].create(
             {
                 "year": 2022,
