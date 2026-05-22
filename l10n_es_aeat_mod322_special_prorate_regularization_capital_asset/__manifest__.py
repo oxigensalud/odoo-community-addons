@@ -4,7 +4,7 @@
     "name": "AEAT 303 - Special Prorate Regularization Capital Asset",
     "summary": "This module allows to regularize capital assets "
     "prorate differences on 322 report",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Accounting",
     "author": "Dixmit",
     "website": "https://github.com/oxigensalud/odoo-community-addons",
