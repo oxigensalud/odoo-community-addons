@@ -12,9 +12,11 @@
     "depends": [
         "l10n_es_special_prorate",
         "l10n_es_aeat_mod322",
+        "l10n_es_aeat_mod322_extension",
     ],
     "data": [
         "data/tax_code_map_mod322_2023_data.xml",
+        "data/tax_code_map_mod322_2025_data.xml",
     ],
     "installable": True,
     "auto_install": True,
