@@ -1,0 +1,1 @@
+Create equipments from stocks
