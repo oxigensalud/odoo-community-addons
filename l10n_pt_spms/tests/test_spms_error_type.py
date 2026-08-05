@@ -17,7 +17,7 @@ class TestSpmsErrorType(SavepointCase):
     def test_seed_known_codes(self):
         c010 = self.ErrorType.search([("code", "=", "C010")])
         self.assertEqual(len(c010), 1)
-        self.assertTrue(c010.message_pt)
+        self.assertTrue(c010.description)
         self.assertFalse(c010.to_classify)
         c012 = self.ErrorType.search([("code", "=", "C012")])
         self.assertTrue(c012.noise)
@@ -34,20 +34,20 @@ class TestSpmsErrorType(SavepointCase):
         error_type = self.ErrorType._get_or_create("C999", "New error message")
         self.assertEqual(self.ErrorType.search_count([]), count_before + 1)
         self.assertEqual(error_type.code, "C999")
-        self.assertEqual(error_type.message_pt, "New error message")
+        self.assertEqual(error_type.description, "New error message")
         self.assertTrue(error_type.to_classify)
 
     def test_get_or_create_backfills_missing_message(self):
         error_type = self.ErrorType._get_or_create("C998")
-        self.assertFalse(error_type.message_pt)
+        self.assertFalse(error_type.description)
         error_type_again = self.ErrorType._get_or_create("C998", "Official text")
         self.assertEqual(error_type_again, error_type)
-        self.assertEqual(error_type.message_pt, "Official text")
+        self.assertEqual(error_type.description, "Official text")
 
     def test_get_or_create_keeps_existing_message(self):
         error_type = self.ErrorType._get_or_create("C997", "First text")
         self.ErrorType._get_or_create("C997", "Second text")
-        self.assertEqual(error_type.message_pt, "First text")
+        self.assertEqual(error_type.description, "First text")
 
     def test_get_or_create_empty_code(self):
         count_before = self.ErrorType.search_count([])
@@ -85,9 +85,7 @@ class TestSpmsErrorType(SavepointCase):
             ["base.group_user", "account.group_account_manager"],
         )
         error_type = self.ErrorType._get_or_create("C996", "Some text")
-        error_type.with_user(user).write(
-            {"to_classify": False, "description": "Classified"}
-        )
+        error_type.with_user(user).write({"to_classify": False, "note": "Classified"})
         self.assertFalse(error_type.to_classify)
 
     def test_acl_plain_user_is_read_only(self):

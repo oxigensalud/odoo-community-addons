@@ -5,7 +5,7 @@
     <record id="spms_error_type_a004" model="spms.error.type">
         <field name="code">A004</field>
         <field
-            name="message_pt"
+            name="description"
         >O documento já foi pago no âmbito de uma factura anterior.</field>
         <field name="usual_level">prestacao</field>
     </record>
@@ -13,7 +13,7 @@
     <record id="spms_error_type_c010" model="spms.error.type">
         <field name="code">C010</field>
         <field
-            name="message_pt"
+            name="description"
         >A data de início não pode ser anterior à data de início do tratamento prescrito e a data de fim não pode ser superior à data de fim do tratamento prescrito, exceto para o período de carência de 30 dias + 150 dias.</field>
         <field name="usual_level">linha</field>
     </record>
@@ -21,7 +21,7 @@
     <record id="spms_error_type_c011" model="spms.error.type">
         <field name="code">C011</field>
         <field
-            name="message_pt"
+            name="description"
         >Tendo por base a mesma prescrição não podem ser faturados mais dias que os previstos no período de validade (validado para a fatura em conferência e para as anteriores), exceto para o período de carência de 30 dias + 150 dias.</field>
         <field name="usual_level">prestacao</field>
     </record>
@@ -29,7 +29,7 @@
     <record id="spms_error_type_c012" model="spms.error.type">
         <field name="code">C012</field>
         <field
-            name="message_pt"
+            name="description"
         >O preço unitário cobrado pela prestação de serviços não se encontra conforme o contrato celebrado entre o prestador e a EFR faturada.</field>
         <field name="usual_level">linha</field>
         <field name="noise" eval="True" />
@@ -43,7 +43,7 @@
     <record id="spms_error_type_c313" model="spms.error.type">
         <field name="code">C313</field>
         <field
-            name="message_pt"
+            name="description"
         >Período de realização dos tratamentos prestados posterior à data de suspensão.</field>
         <field name="usual_level">prestacao</field>
     </record>
@@ -51,7 +51,7 @@
     <record id="spms_error_type_d306" model="spms.error.type">
         <field name="code">D306</field>
         <field
-            name="message_pt"
+            name="description"
         >Não foram carregadas linhas para a prestação electrónica</field>
         <field name="usual_level">prestacao</field>
     </record>

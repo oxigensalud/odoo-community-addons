@@ -64,9 +64,9 @@ msgid "Created on"
 msgstr "Criado em"
 
 #. module: l10n_pt_spms
-#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__description
-msgid "Description"
-msgstr "Descrição"
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__note
+msgid "Note"
+msgstr "Nota"
 
 #. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_product__display_name
@@ -86,7 +86,7 @@ msgid "Error Type"
 msgstr "Tipo de Erro"
 
 #. module: l10n_pt_spms
-#: model:ir.model.fields,help:l10n_pt_spms.field_spms_error_type__message_pt
+#: model:ir.model.fields,help:l10n_pt_spms.field_spms_error_type__description
 msgid "Error message exactly as the CCF check documents report it."
 msgstr ""
 "Mensagem de erro exatamente como os documentos de conferência do CCF a "
@@ -119,11 +119,11 @@ msgstr ""
 " costuma estar ancorado."
 
 #. module: l10n_pt_spms
-#: model:ir.model.fields,help:l10n_pt_spms.field_spms_error_type__description
+#: model:ir.model.fields,help:l10n_pt_spms.field_spms_error_type__note
 msgid ""
-"Internal description of what this error means for the invoicing workflow."
+"Internal note about what this error means for the invoicing workflow."
 msgstr ""
-"Descrição interna do que este erro significa para o fluxo de faturação."
+"Nota interna sobre o que este erro significa para o fluxo de faturação."
 
 #. module: l10n_pt_spms
 #: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_error_type__usual_level__invoice
@@ -187,7 +187,7 @@ msgid "Noise"
 msgstr "Ruído"
 
 #. module: l10n_pt_spms
-#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__message_pt
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__description
 msgid "Official Message (PT)"
 msgstr "Mensagem Oficial (PT)"
 

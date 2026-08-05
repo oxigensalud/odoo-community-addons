@@ -9,8 +9,8 @@
                 <sheet>
                     <group>
                         <field name="code" />
-                        <field name="message_pt" />
                         <field name="description" />
+                        <field name="note" />
                         <field name="usual_level" />
                         <field name="noise" />
                         <field name="to_classify" />
@@ -25,8 +25,8 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="code" />
-                <field name="description" />
-                <field name="message_pt" optional="hide" />
+                <field name="note" />
+                <field name="description" optional="hide" />
                 <field name="usual_level" />
                 <field name="noise" />
                 <field name="to_classify" />
@@ -39,8 +39,8 @@
         <field name="arch" type="xml">
             <search>
                 <field name="code" />
-                <field name="message_pt" />
                 <field name="description" />
+                <field name="note" />
                 <filter
                     string="To Classify"
                     name="to_classify"

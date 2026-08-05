@@ -16,13 +16,12 @@ class SpmsErrorType(models.Model):
         required=True,
         index=True,
     )
-    message_pt = fields.Char(
+    description = fields.Char(
         string="Official Message (PT)",
         help="Error message exactly as the CCF check documents report it.",
     )
-    description = fields.Char(
-        help="Internal description of what this error means for the "
-        "invoicing workflow.",
+    note = fields.Char(
+        help="Internal note about what this error means for the " "invoicing workflow.",
     )
     usual_level = fields.Selection(
         selection=[
@@ -57,8 +56,8 @@ class SpmsErrorType(models.Model):
         result = []
         for record in self:
             name = record.code
-            if record.message_pt:
-                name = "%s - %s" % (record.code, record.message_pt)
+            if record.description:
+                name = "%s - %s" % (record.code, record.description)
             result.append((record.id, name))
         return result
 
@@ -75,12 +74,12 @@ class SpmsErrorType(models.Model):
                     return self.create(
                         {
                             "code": code,
-                            "message_pt": message,
+                            "description": message,
                             "to_classify": True,
                         }
                     )
             except IntegrityError:
                 error_type = self.search([("code", "=", code)], limit=1)
-        if message and not error_type.message_pt:
-            error_type.message_pt = message
+        if message and not error_type.description:
+            error_type.description = message
         return error_type
