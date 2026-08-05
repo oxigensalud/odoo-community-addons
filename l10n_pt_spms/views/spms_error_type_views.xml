@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 NuoBiT Solutions SL - Deniz Gallo <dgallo@nuobit.com>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="spms_error_type_form_view" model="ir.ui.view">
+        <field name="model">spms.error.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="code" />
+                        <field name="message_pt" />
+                        <field name="description" />
+                        <field name="usual_level" />
+                        <field name="noise" />
+                        <field name="to_classify" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="spms_error_type_tree_view" model="ir.ui.view">
+        <field name="model">spms.error.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code" />
+                <field name="description" />
+                <field name="message_pt" optional="hide" />
+                <field name="usual_level" />
+                <field name="noise" />
+                <field name="to_classify" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="spms_error_type_search_view" model="ir.ui.view">
+        <field name="model">spms.error.type</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="code" />
+                <field name="message_pt" />
+                <field name="description" />
+                <filter
+                    string="To Classify"
+                    name="to_classify"
+                    domain="[('to_classify', '=', True)]"
+                />
+                <filter string="Noise" name="noise" domain="[('noise', '=', True)]" />
+                <group expand="0" string="Group By">
+                    <filter
+                        string="Usual Level"
+                        name="group_by_usual_level"
+                        context="{'group_by': 'usual_level'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="spms_error_type_act_window" model="ir.actions.act_window">
+        <field name="name">SPMS Error Type</field>
+        <field name="res_model">spms.error.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="spms_error_type_menu" model="ir.ui.menu">
+        <field name="name">Error Type</field>
+        <field name="parent_id" ref="spms_root_menu" />
+        <field name="action" ref="spms_error_type_act_window" />
+        <field name="sequence" eval="60" />
+    </record>
+</odoo>

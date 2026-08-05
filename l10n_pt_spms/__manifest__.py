@@ -14,11 +14,13 @@
     "data": [
         "views/res_partner.xml",
         "security/ir.model.access.csv",
+        "data/spms_error_type_data.xml",
         "views/menu.xml",
         "views/spms_context_views.xml",
         "views/spms_prescription_type_views.xml",
         "views/spms_lot_views.xml",
         "views/product_template_views.xml",
         "views/spms_suspension_reason_views.xml",
+        "views/spms_error_type_views.xml",
     ],
 }

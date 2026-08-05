@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-01 07:27+0000\n"
-"PO-Revision-Date: 2025-09-01 07:27+0000\n"
+"POT-Creation-Date: 2026-08-05 14:32+0000\n"
+"PO-Revision-Date: 2026-08-05 14:32+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,12 +16,18 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: l10n_pt_spms
-#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_lot__code__991
-msgid "Aerosol therapy"
-msgstr "Terapia por aerosol"
+#: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_error_type_code_uniq
+msgid "An error type with this code already exists."
+msgstr "Ya existe un tipo de error con este código."
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_error_type__usual_level__prestacao
+msgid "Claim"
+msgstr "Prestación"
 
 #. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__code
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__code
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__code
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__code
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason__code
@@ -41,6 +47,7 @@ msgstr "Contexto"
 
 #. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__create_uid
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__create_uid
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__create_uid
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__create_uid
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason__create_uid
@@ -49,6 +56,7 @@ msgstr "Creado por"
 
 #. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__create_date
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__create_date
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__create_date
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__create_date
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason__create_date
@@ -56,10 +64,16 @@ msgid "Created on"
 msgstr "Creado el"
 
 #. module: l10n_pt_spms
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_product__display_name
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_template__display_name
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_res_partner__display_name
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__display_name
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__display_name
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__display_name
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__display_name
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason__display_name
@@ -67,10 +81,27 @@ msgid "Display Name"
 msgstr "Nombre mostrado"
 
 #. module: l10n_pt_spms
+#: model:ir.ui.menu,name:l10n_pt_spms.spms_error_type_menu
+msgid "Error Type"
+msgstr "Tipo de error"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields,help:l10n_pt_spms.field_spms_error_type__message_pt
+msgid "Error message exactly as the CCF check documents report it."
+msgstr ""
+"Mensaje de error tal cual lo reportan los documentos de conferencia del CCF."
+
+#. module: l10n_pt_spms
+#: model_terms:ir.ui.view,arch_db:l10n_pt_spms.spms_error_type_search_view
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_product__id
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_template__id
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_res_partner__id
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__id
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__id
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__id
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__id
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason__id
@@ -78,10 +109,33 @@ msgid "ID"
 msgstr ""
 
 #. module: l10n_pt_spms
+#: model:ir.model.fields,help:l10n_pt_spms.field_spms_error_type__usual_level
+msgid ""
+"Informative: nesting point of the check document where this error is usually"
+" anchored."
+msgstr ""
+"Informativo: punto de anidamiento del documento de conferencia donde este "
+"error suele estar anclado."
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields,help:l10n_pt_spms.field_spms_error_type__description
+msgid ""
+"Internal description of what this error means for the invoicing workflow."
+msgstr ""
+"Descripción interna de lo que este error implica para el flujo de "
+"facturación."
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_error_type__usual_level__invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_product____last_update
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_template____last_update
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_res_partner____last_update
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context____last_update
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type____last_update
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot____last_update
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type____last_update
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason____last_update
@@ -90,6 +144,7 @@ msgstr "Última modificación el"
 
 #. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__write_uid
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__write_uid
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__write_uid
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__write_uid
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason__write_uid
@@ -98,6 +153,7 @@ msgstr "Última actualización por"
 
 #. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__write_date
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__write_date
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_lot__write_date
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_prescription_type__write_date
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason__write_date
@@ -105,14 +161,15 @@ msgid "Last Updated on"
 msgstr "Última actualización el"
 
 #. module: l10n_pt_spms
+#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_error_type__usual_level__linha
+msgid "Line"
+msgstr "Línea"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_error_type__usual_level__lote
 #: model:ir.ui.menu,name:l10n_pt_spms.spms_lot_menu
 msgid "Lot"
 msgstr "Lote"
-
-#. module: l10n_pt_spms
-#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_lot__code__993
-msgid "Mechanical ventilation"
-msgstr "Ventilación mecánica"
 
 #. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__name
@@ -124,14 +181,20 @@ msgid "Name"
 msgstr "Nombre"
 
 #. module: l10n_pt_spms
-#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_lot__code__994
-msgid "Others"
-msgstr "Otros"
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__noise
+#: model_terms:ir.ui.view,arch_db:l10n_pt_spms.spms_error_type_search_view
+msgid "Noise"
+msgstr "Ruido"
 
 #. module: l10n_pt_spms
-#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_lot__code__992
-msgid "Oxygen therapy"
-msgstr "Terapia de oxígeno"
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__message_pt
+msgid "Official Message (PT)"
+msgstr "Mensaje oficial (PT)"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_error_type__usual_level__prescricao
+msgid "Prescription Data"
+msgstr "Datos de prescripción"
 
 #. module: l10n_pt_spms
 #: model:ir.ui.menu,name:l10n_pt_spms.spms_prescription_type_menu
@@ -151,13 +214,19 @@ msgstr "Plantilla de producto"
 #. module: l10n_pt_spms
 #: model:ir.ui.menu,name:l10n_pt_spms.spms_root_menu
 msgid "SPMS"
-msgstr "SPMS"
+msgstr ""
 
 #. module: l10n_pt_spms
 #: model:ir.actions.act_window,name:l10n_pt_spms.spms_context_act_window
 #: model:ir.model,name:l10n_pt_spms.model_spms_context
 msgid "SPMS Context"
 msgstr "Contexto SPMS"
+
+#. module: l10n_pt_spms
+#: model:ir.actions.act_window,name:l10n_pt_spms.spms_error_type_act_window
+#: model:ir.model,name:l10n_pt_spms.model_spms_error_type
+msgid "SPMS Error Type"
+msgstr "Tipo de error SPMS"
 
 #. module: l10n_pt_spms
 #: model:ir.actions.act_window,name:l10n_pt_spms.spms_lot_act_window
@@ -178,17 +247,23 @@ msgid "SPMS Suspension Reason"
 msgstr "Razón de suspensión SPMS"
 
 #. module: l10n_pt_spms
+#: model:ir.model.fields,help:l10n_pt_spms.field_spms_error_type__to_classify
+msgid ""
+"Set on codes auto-created by the check processing: the code was unknown and "
+"is pending human classification."
+msgstr ""
+"Se marca en los códigos autocreados por el procesado de la conferencia: el "
+"código era desconocido y está pendiente de clasificación humana."
+
+#. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_res_partner__spms_information
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_res_users__spms_information
-#: model:ir.model.fields,field_description:l10n_pt_spms.field_woocommerce_res_partner__spms_information
 msgid "Spms Information"
 msgstr "Información SPMS"
 
 #. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_product__spms_lot_id
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_template__spms_lot_id
-#: model:ir.model.fields,field_description:l10n_pt_spms.field_woocommerce_product_product__spms_lot_id
-#: model:ir.model.fields,field_description:l10n_pt_spms.field_woocommerce_product_template__spms_lot_id
 msgid "Spms Lot"
 msgstr "Lote SPMS"
 
@@ -196,6 +271,16 @@ msgstr "Lote SPMS"
 #: model:ir.ui.menu,name:l10n_pt_spms.spms_suspension_reason_menu
 msgid "Suspension Reason"
 msgstr "Razón de suspensión"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields,help:l10n_pt_spms.field_spms_error_type__noise
+msgid ""
+"Systematic noise: reported on almost every line of the affected invoices "
+"(e.g. C012), so lists and analyses may want to filter it out."
+msgstr ""
+"Ruido sistemático: se reporta en casi todas las líneas de las facturas "
+"afectadas (p. ej. C012), por lo que las listas y los análisis pueden querer "
+"filtrarlo."
 
 #. module: l10n_pt_spms
 #: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_context_uniq
@@ -208,3 +293,15 @@ msgstr "El código debe ser único"
 #: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_lot_uniq
 msgid "The code of the lot must be unique."
 msgstr "El código del lote debe ser único."
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__to_classify
+#: model_terms:ir.ui.view,arch_db:l10n_pt_spms.spms_error_type_search_view
+msgid "To Classify"
+msgstr "Por clasificar"
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__usual_level
+#: model_terms:ir.ui.view,arch_db:l10n_pt_spms.spms_error_type_search_view
+msgid "Usual Level"
+msgstr "Nivel habitual"
