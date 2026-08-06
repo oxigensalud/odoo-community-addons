@@ -180,7 +180,7 @@ msgid "Name"
 msgstr "Nombre"
 
 #. module: l10n_pt_spms
-#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__noise
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__is_noise
 #: model_terms:ir.ui.view,arch_db:l10n_pt_spms.spms_error_type_search_view
 msgid "Noise"
 msgstr "Ruido"
@@ -272,7 +272,7 @@ msgid "Suspension Reason"
 msgstr "Razón de suspensión"
 
 #. module: l10n_pt_spms
-#: model:ir.model.fields,help:l10n_pt_spms.field_spms_error_type__noise
+#: model:ir.model.fields,help:l10n_pt_spms.field_spms_error_type__is_noise
 msgid ""
 "Systematic noise: reported on almost every line of the affected invoices "
 "(e.g. C012), so lists and analyses may want to filter it out."

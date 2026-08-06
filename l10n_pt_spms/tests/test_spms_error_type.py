@@ -20,7 +20,7 @@ class TestSpmsErrorType(SavepointCase):
         self.assertTrue(c010.description)
         self.assertFalse(c010.to_classify)
         c012 = self.ErrorType.search([("code", "=", "C012")])
-        self.assertTrue(c012.noise)
+        self.assertTrue(c012.is_noise)
 
     def test_get_or_create_existing_returns_same_record(self):
         c010 = self.ErrorType.search([("code", "=", "C010")])

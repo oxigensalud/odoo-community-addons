@@ -32,7 +32,7 @@
             name="description"
         >O preço unitário cobrado pela prestação de serviços não se encontra conforme o contrato celebrado entre o prestador e a EFR faturada.</field>
         <field name="usual_level">linha</field>
-        <field name="noise" eval="True" />
+        <field name="is_noise" eval="True" />
     </record>
 
     <record id="spms_error_type_c013" model="spms.error.type">

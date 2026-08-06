@@ -12,7 +12,7 @@
                         <field name="description" />
                         <field name="note" />
                         <field name="usual_level" />
-                        <field name="noise" />
+                        <field name="is_noise" />
                         <field name="to_classify" />
                     </group>
                 </sheet>
@@ -28,7 +28,7 @@
                 <field name="note" />
                 <field name="description" optional="hide" />
                 <field name="usual_level" />
-                <field name="noise" />
+                <field name="is_noise" />
                 <field name="to_classify" />
             </tree>
         </field>
@@ -46,7 +46,11 @@
                     name="to_classify"
                     domain="[('to_classify', '=', True)]"
                 />
-                <filter string="Noise" name="noise" domain="[('noise', '=', True)]" />
+                <filter
+                    string="Noise"
+                    name="is_noise"
+                    domain="[('is_noise', '=', True)]"
+                />
                 <group expand="0" string="Group By">
                     <filter
                         string="Usual Level"

@@ -34,7 +34,7 @@ class SpmsErrorType(models.Model):
         help="Informative: nesting point of the check document where this "
         "error is usually anchored.",
     )
-    noise = fields.Boolean(
+    is_noise = fields.Boolean(
         help="Systematic noise: reported on almost every line of the "
         "affected invoices (e.g. C012), so lists and analyses may want "
         "to filter it out.",
