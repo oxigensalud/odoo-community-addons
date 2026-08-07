@@ -25,8 +25,8 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="code" />
-                <field name="note" />
-                <field name="description" optional="hide" />
+                <field name="description" />
+                <field name="note" optional="hide" />
                 <field name="usual_level" />
                 <field name="is_noise" />
                 <field name="to_classify" />
