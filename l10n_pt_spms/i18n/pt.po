@@ -6,10 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-05 14:32+0000\n"
+"POT-Creation-Date: 2026-08-08 18:45+0000\n"
 "PO-Revision-Date: 2026-08-05 14:32+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -19,11 +20,6 @@ msgstr ""
 #: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_error_type_code_uniq
 msgid "An error type with this code already exists."
 msgstr "Já existe um tipo de erro com este código."
-
-#. module: l10n_pt_spms
-#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_error_type__usual_level__prestacao
-msgid "Claim"
-msgstr "Prestação"
 
 #. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_context__code
@@ -64,11 +60,6 @@ msgid "Created on"
 msgstr "Criado em"
 
 #. module: l10n_pt_spms
-#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__note
-msgid "Note"
-msgstr "Nota"
-
-#. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_product__display_name
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_template__display_name
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_res_partner__display_name
@@ -93,11 +84,6 @@ msgstr ""
 "reportam."
 
 #. module: l10n_pt_spms
-#: model_terms:ir.ui.view,arch_db:l10n_pt_spms.spms_error_type_search_view
-msgid "Group By"
-msgstr "Agrupar por"
-
-#. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_product__id
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_template__id
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_res_partner__id
@@ -108,27 +94,6 @@ msgstr "Agrupar por"
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_suspension_reason__id
 msgid "ID"
 msgstr ""
-
-#. module: l10n_pt_spms
-#: model:ir.model.fields,help:l10n_pt_spms.field_spms_error_type__usual_level
-msgid ""
-"Informative: nesting point of the check document where this error is usually"
-" anchored."
-msgstr ""
-"Informativo: ponto de aninhamento do documento de conferência onde este erro"
-" costuma estar ancorado."
-
-#. module: l10n_pt_spms
-#: model:ir.model.fields,help:l10n_pt_spms.field_spms_error_type__note
-msgid ""
-"Internal note about what this error means for the invoicing workflow."
-msgstr ""
-"Nota interna sobre o que este erro significa para o fluxo de faturação."
-
-#. module: l10n_pt_spms
-#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_error_type__usual_level__invoice
-msgid "Invoice"
-msgstr "Fatura"
 
 #. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_product_product____last_update
@@ -161,12 +126,6 @@ msgid "Last Updated on"
 msgstr "Última Atualização em"
 
 #. module: l10n_pt_spms
-#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_error_type__usual_level__linha
-msgid "Line"
-msgstr "Linha"
-
-#. module: l10n_pt_spms
-#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_error_type__usual_level__lote
 #: model:ir.ui.menu,name:l10n_pt_spms.spms_lot_menu
 msgid "Lot"
 msgstr "Lote"
@@ -181,20 +140,9 @@ msgid "Name"
 msgstr "Nome"
 
 #. module: l10n_pt_spms
-#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__is_noise
-#: model_terms:ir.ui.view,arch_db:l10n_pt_spms.spms_error_type_search_view
-msgid "Noise"
-msgstr "Ruído"
-
-#. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__description
 msgid "Official Message (PT)"
 msgstr "Mensagem Oficial (PT)"
-
-#. module: l10n_pt_spms
-#: model:ir.model.fields.selection,name:l10n_pt_spms.selection__spms_error_type__usual_level__prescricao
-msgid "Prescription Data"
-msgstr "Dados de Prescrição"
 
 #. module: l10n_pt_spms
 #: model:ir.ui.menu,name:l10n_pt_spms.spms_prescription_type_menu
@@ -247,15 +195,6 @@ msgid "SPMS Suspension Reason"
 msgstr "Motivo de Suspensão SPMS"
 
 #. module: l10n_pt_spms
-#: model:ir.model.fields,help:l10n_pt_spms.field_spms_error_type__to_classify
-msgid ""
-"Set on codes auto-created by the check processing: the code was unknown and "
-"is pending human classification."
-msgstr ""
-"Marcado nos códigos autocriados pelo processamento da conferência: o código "
-"era desconhecido e está pendente de classificação humana."
-
-#. module: l10n_pt_spms
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_res_partner__spms_information
 #: model:ir.model.fields,field_description:l10n_pt_spms.field_res_users__spms_information
 msgid "Spms Information"
@@ -273,15 +212,6 @@ msgid "Suspension Reason"
 msgstr "Motivo de Suspensão"
 
 #. module: l10n_pt_spms
-#: model:ir.model.fields,help:l10n_pt_spms.field_spms_error_type__is_noise
-msgid ""
-"Systematic noise: reported on almost every line of the affected invoices "
-"(e.g. C012), so lists and analyses may want to filter it out."
-msgstr ""
-"Ruído sistemático: reportado em quase todas as linhas das faturas afetadas "
-"(p. ex. C012), pelo que as listas e análises podem querer filtrá-lo."
-
-#. module: l10n_pt_spms
 #: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_context_uniq
 #: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_prescription_type_uniq
 #: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_suspension_reason_uniq
@@ -292,15 +222,3 @@ msgstr " O código deve ser único"
 #: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_lot_uniq
 msgid "The code of the lot must be unique."
 msgstr "O código do lote deve ser único."
-
-#. module: l10n_pt_spms
-#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__to_classify
-#: model_terms:ir.ui.view,arch_db:l10n_pt_spms.spms_error_type_search_view
-msgid "To Classify"
-msgstr "Por Classificar"
-
-#. module: l10n_pt_spms
-#: model:ir.model.fields,field_description:l10n_pt_spms.field_spms_error_type__usual_level
-#: model_terms:ir.ui.view,arch_db:l10n_pt_spms.spms_error_type_search_view
-msgid "Usual Level"
-msgstr "Nível Habitual"

@@ -8,5 +8,4 @@ access_spms_prescription_type_manager,spms.prescription.type.manager,model_spms_
 access_spms_suspension_reason_user,spms.suspension.reason.user,model_spms_suspension_reason,base.group_user,1,0,0,0
 access_spms_suspension_reason_manager,spms.suspension.reason.manager,model_spms_suspension_reason,base.group_system,1,1,1,1
 access_spms_error_type_user,spms.error.type.user,model_spms_error_type,base.group_user,1,0,0,0
-access_spms_error_type_account_manager,spms.error.type.account.manager,model_spms_error_type,account.group_account_manager,1,1,1,0
-access_spms_error_type_manager,spms.error.type.manager,model_spms_error_type,base.group_system,1,1,1,1
+access_spms_error_type_account_manager,spms.error.type.account.manager,model_spms_error_type,account.group_account_manager,1,1,1,1

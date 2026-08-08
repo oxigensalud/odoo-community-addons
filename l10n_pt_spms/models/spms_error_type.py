@@ -15,34 +15,12 @@ class SpmsErrorType(models.Model):
     code = fields.Char(
         required=True,
         index=True,
+        readonly=True,
     )
     description = fields.Char(
         string="Official Message (PT)",
+        readonly=True,
         help="Error message exactly as the CCF check documents report it.",
-    )
-    note = fields.Char(
-        help="Internal note about what this error means for the " "invoicing workflow.",
-    )
-    usual_level = fields.Selection(
-        selection=[
-            ("invoice", "Invoice"),
-            ("lote", "Lot"),
-            ("prestacao", "Claim"),
-            ("linha", "Line"),
-            ("prescricao", "Prescription Data"),
-        ],
-        help="Informative: nesting point of the check document where this "
-        "error is usually anchored.",
-    )
-    is_noise = fields.Boolean(
-        string="Noise",
-        help="Systematic noise: reported on almost every line of the "
-        "affected invoices (e.g. C012), so lists and analyses may want "
-        "to filter it out.",
-    )
-    to_classify = fields.Boolean(
-        help="Set on codes auto-created by the check processing: the code "
-        "was unknown and is pending human classification.",
     )
 
     _sql_constraints = [
@@ -64,7 +42,13 @@ class SpmsErrorType(models.Model):
 
     @api.model
     def _get_or_create(self, code, message=None):
-        """Return the error type for ``code``, creating it if unknown."""
+        """Return the error type for ``code``, creating it if unknown.
+
+        The catalogue is a local mirror of a table the CCF owns and only
+        publishes through the check documents themselves, so the wire is
+        the authority: unknown codes are created on arrival and a changed
+        official message overwrites the stored one.
+        """
         code = (code or "").strip()
         if not code:
             return self.browse()
@@ -72,15 +56,9 @@ class SpmsErrorType(models.Model):
         if not error_type:
             try:
                 with self.env.cr.savepoint():
-                    return self.create(
-                        {
-                            "code": code,
-                            "description": message,
-                            "to_classify": True,
-                        }
-                    )
+                    return self.create({"code": code, "description": message})
             except IntegrityError:
                 error_type = self.search([("code", "=", code)], limit=1)
-        if message and not error_type.description:
+        if message and error_type.description != message:
             error_type.description = message
         return error_type

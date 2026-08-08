@@ -10,10 +10,6 @@
                     <group>
                         <field name="code" />
                         <field name="description" />
-                        <field name="note" />
-                        <field name="usual_level" />
-                        <field name="is_noise" />
-                        <field name="to_classify" />
                     </group>
                 </sheet>
             </form>
@@ -26,10 +22,6 @@
             <tree>
                 <field name="code" />
                 <field name="description" />
-                <field name="note" optional="hide" />
-                <field name="usual_level" />
-                <field name="is_noise" />
-                <field name="to_classify" />
             </tree>
         </field>
     </record>
@@ -40,24 +32,6 @@
             <search>
                 <field name="code" />
                 <field name="description" />
-                <field name="note" />
-                <filter
-                    string="To Classify"
-                    name="to_classify"
-                    domain="[('to_classify', '=', True)]"
-                />
-                <filter
-                    string="Noise"
-                    name="is_noise"
-                    domain="[('is_noise', '=', True)]"
-                />
-                <group expand="0" string="Group By">
-                    <filter
-                        string="Usual Level"
-                        name="group_by_usual_level"
-                        context="{'group_by': 'usual_level'}"
-                    />
-                </group>
             </search>
         </field>
     </record>
