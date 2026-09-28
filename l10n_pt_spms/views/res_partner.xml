@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2025 Dixmit
+     Copyright 2026 NuoBiT Solutions SL - Eric Antones <eantones@nuobit.com>
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
 
@@ -8,7 +9,11 @@
         <field name="inherit_id" ref="account.view_partner_property_form" />
         <field name="arch" type="xml">
             <group name='accounting_entries' position="inside">
-                <field name="spms_information" />
+                <field name="spms_available" invisible="1" />
+                <field
+                    name="spms_information"
+                    attrs="{'invisible': [('spms_available', '=', False)]}"
+                />
             </group>
         </field>
     </record>
