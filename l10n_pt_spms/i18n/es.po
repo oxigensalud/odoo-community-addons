@@ -208,3 +208,9 @@ msgstr "El código debe ser único"
 #: model:ir.model.constraint,message:l10n_pt_spms.constraint_spms_lot_uniq
 msgid "The code of the lot must be unique."
 msgstr "El código del lote debe ser único."
+
+#. module: l10n_pt_spms
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_res_partner__spms_available
+#: model:ir.model.fields,field_description:l10n_pt_spms.field_res_users__spms_available
+msgid "SPMS Available"
+msgstr "SPMS disponible"

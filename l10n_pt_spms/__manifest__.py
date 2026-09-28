@@ -1,12 +1,13 @@
 # Copyright 2023 Dixmit
 # Copyright 2025 NuoBiT - Deniz Gallo <dgallo@nuobit.com>
+# Copyright 2026 NuoBiT Solutions SL - Eric Antones <eantones@nuobit.com>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 
 {
     "name": "SPMS base",
     "summary": "SPMS base models and fields",
-    "version": "18.0.1.0.0",
+    "version": "18.0.1.0.1",
     "license": "AGPL-3",
     "author": "Dixmit, NuoBiT Solutions SL, Oxigen Salud SA",
     "website": "https://github.com/oxigensalud/odoo-community-addons",
