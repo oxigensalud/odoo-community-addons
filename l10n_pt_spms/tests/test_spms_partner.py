@@ -25,7 +25,10 @@ class TestSpmsPartner(TransactionCase):
         cls.partner = cls.env["res.partner"].create(
             {"name": "SPMS shared test customer"}
         )
-        account_types = {"receivable": "asset_receivable", "payable": "liability_payable"}
+        account_types = {
+            "receivable": "asset_receivable",
+            "payable": "liability_payable",
+        }
         for company in cls.portuguese_company + cls.spanish_company:
             for kind in ("receivable", "payable"):
                 account = (
