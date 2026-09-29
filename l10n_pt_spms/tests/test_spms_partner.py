@@ -10,6 +10,11 @@ class TestSpmsPartner(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        # the accounting entries group of the contact form is only shown to
+        # users with the read-only accounting features group
+        cls.env.user.write(
+            {"groups_id": [(4, cls.env.ref("account.group_account_readonly").id)]}
+        )
         cls.portuguese_company = cls.env["res.company"].create(
             {
                 "name": "SPMS Portuguese test company",
