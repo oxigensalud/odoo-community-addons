@@ -1,11 +1,12 @@
 # Copyright Dixmit
+# Copyright 2026 NuoBiT Solutions SL - Eric Antones <eantones@nuobit.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
 
 {
     "name": "AEAT 322 - Special Prorate Regularization Capital Asset legacy",
     "summary": "This module extends Special Prorate Regularization Capital Asset "
     "to include old assets",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.2",
     "category": "Accounting",
     "author": "Dixmit, Oxigen Salud",
     "website": "https://github.com/oxigensalud/odoo-community-addons",
