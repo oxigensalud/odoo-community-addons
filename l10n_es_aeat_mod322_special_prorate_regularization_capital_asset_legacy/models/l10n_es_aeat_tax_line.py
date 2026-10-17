@@ -22,6 +22,7 @@ class L10nEsAeatTaxLine(models.Model):
     )
     mod322_period_type = fields.Selection(related="mod322_id.period_type")
 
+    @api.depends("model", "res_id")
     def _compute_mod322_id(self):
         for rec in self:
             if rec.model == "l10n.es.aeat.mod322.report":
