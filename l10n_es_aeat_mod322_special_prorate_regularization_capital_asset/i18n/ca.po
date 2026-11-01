@@ -1,0 +1,166 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 16:31+0000\n"
+"PO-Revision-Date: 2026-05-22 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#: model:ir.model,name:l10n_es_aeat_mod322_special_prorate_regularization_capital_asset.model_l10n_es_aeat_mod322_report
+msgid "AEAT 322 Report"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod322_special_prorate_regularization_capital_asset/models/mod322.py:0
+msgid "Account entry related to the asset is neither an invoice nor a refund"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#: model:ir.model,name:l10n_es_aeat_mod322_special_prorate_regularization_capital_asset.model_account_asset
+msgid "Asset"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod322_special_prorate_regularization_capital_asset/models/mod322.py:0
+msgid "Asset %s doesn't have an invoice line"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#: model:ir.model,name:l10n_es_aeat_mod322_special_prorate_regularization_capital_asset.model_capital_asset_prorate_regularization
+msgid "Capital Asset Prorate Regularization"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod322_special_prorate_regularization_capital_asset.l10n_es_aeat_mod322_report_form_view
+msgid "Capital Assets Regularization Parameters"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#: model:ir.model.fields,help:l10n_es_aeat_mod322_special_prorate_regularization_capital_asset.field_l10n_es_aeat_mod322_report__field_60
+msgid "Capital assets regularization by application of the final percentage."
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod322_special_prorate_regularization_capital_asset.l10n_es_aeat_mod322_report_form_view
+msgid "Counterpart Account Payable"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#: model_terms:ir.ui.view,arch_db:l10n_es_aeat_mod322_special_prorate_regularization_capital_asset.l10n_es_aeat_mod322_report_form_view
+msgid "Counterpart Account Receivable"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod322_special_prorate_regularization_capital_asset.field_l10n_es_aeat_mod322_report__counterpart_capital_assets_receivable_account_id
+msgid "Counterpart Capital Assets Account Receivable"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod322_special_prorate_regularization_capital_asset.field_l10n_es_aeat_mod322_report__counterpart_capital_assets_payable_account_id
+msgid "Counterpart Capital Assets Payable Account"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod322_special_prorate_regularization_capital_asset.field_capital_asset_prorate_regularization__mod322_id
+msgid "Model 322"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod322_special_prorate_regularization_capital_asset/models/mod322.py:0
+msgid "More than one repartition line found on tax %s"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod322_special_prorate_regularization_capital_asset/models/mod322.py:0
+msgid "Repartition line not found on tax %s"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod322_special_prorate_regularization_capital_asset/models/mod322.py:0
+msgid "The account move cannot be created because it already exists"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod322_special_prorate_regularization_capital_asset/models/mod322.py:0
+msgid ""
+"The following assets require a capital asset type before creating the "
+"capital asset prorate regularization: %s"
+msgstr ""
+"Els actius seguents requereixen un tipus de be d'inversio abans de crear la "
+"regularitzacio de prorrata de bens d'inversio: %s"
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod322_special_prorate_regularization_capital_asset/models/mod322.py:0
+msgid ""
+"The following invoices %s have products with capital asset taxes but without "
+"asset"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod322_special_prorate_regularization_capital_asset/models/mod322.py:0
+msgid ""
+"The model 322 is linked in prorate lines in the year: %(year)s. Please "
+"review the assets: %(assets)s"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod322_special_prorate_regularization_capital_asset/models/capital_asset_prorate_regularization.py:0
+#: code:addons/l10n_es_aeat_mod322_special_prorate_regularization_capital_asset/models/mod322.py:0
+msgid ""
+"This asset have a prorate regularization line this year: %(year)s, but it's "
+"not related with a model 322. Please, review prorate regularizations of "
+"capital asset: %(asset)s"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod322_special_prorate_regularization_capital_asset/models/capital_asset_prorate_regularization.py:0
+#: code:addons/l10n_es_aeat_mod322_special_prorate_regularization_capital_asset/models/mod322.py:0
+msgid ""
+"This asset have a prorate regularization line this year: %(year)s, but "
+"related with another model 322. Please, review prorate regularizations of "
+"capital asset: %(asset)s"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod322_special_prorate_regularization_capital_asset/models/capital_asset_prorate_regularization.py:0
+msgid ""
+"You can't delete a capital asset regularization line if it's linked with a "
+"model 322."
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#. odoo-python
+#: code:addons/l10n_es_aeat_mod322_special_prorate_regularization_capital_asset/models/mod322.py:0
+msgid "You must fill both journal and counterpart receivable/payable account."
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod322_special_prorate_regularization_capital_asset.field_l10n_es_aeat_mod322_report__field_60
+msgid "[60] Capital Assets Prorate Regularization"
+msgstr ""
+
+#. module: l10n_es_aeat_mod322_special_prorate_regularization_capital_asset
+#: model:ir.model.fields,field_description:l10n_es_aeat_mod322_special_prorate_regularization_capital_asset.field_l10n_es_aeat_mod322_report__capital_asset_prorate_regularization_line_ids
+msgid "capital asset prorate regularization lines"
+msgstr ""
